@@ -1,0 +1,376 @@
+@import "variables";
+@import "helper_functions";
+@import "mixins";
+
+/* Border box declaration */
+html {
+  box-sizing: border-box;
+}
+
+/* inherit border-box on all elements in the universe and before and after */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+	font-size: $body-font-size;
+	font-family: 'Lato', sans-serif;
+	background-color: $body-background-color;
+}
+
+body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6 {
+  font-size-adjust: $primary-font-size-adjust;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Francois One', sans-serif;
+}
+
+a {
+	color: $primary-link-color;
+}
+
+.wrapper {
+	width: $wrapper-width;
+	max-width: $wrapper-max-width;
+	margin: 0 auto;
+	float: none;
+	background-color: $primary-background-color;	
+}
+
+header {
+		font-family: 'Lato', sans-serif; 
+		color: $primary-header-text-color;
+}
+
+// Nesting the main tag
+// Moved the main img from below up into this nested section
+main {
+	overflow: auto;
+	background-color: $primary-background-color;
+
+	h2 {
+		padding-top: 0em;
+		background-color: $primary-background-color;
+		color: $primary-heading-text-color;
+		text-align: center;
+		font-family: 'Francois One', sans-serif;
+	}
+	h3, h4 {
+		background-color: $primary-background-color;
+		font-family: 'Francois One', sans-serif;
+	}
+
+	p {
+		font-family: 'Lato', sans-serif;
+		background-color: $primary-background-color;
+		color: $primary-light-text-color;
+	}
+
+	img {
+		float: left;
+	}
+}
+
+// Nested the div.photography class
+// Needed to separate this from the main nesting
+div.photogallery {
+	h2 {
+		padding-top: 0em;
+		background-color: $primary-background-color;
+		color: $primary-heading-text-color;
+		text-align: center;
+		font-family: 'Francois One', sans-serif;
+	}
+
+	p {
+		font-family: 'Lato', sans-serif;
+		background-color: $primary-background-color;
+		color: $primary-light-text-color;
+		padding: {
+			left: $photo-photogallery-p-padding-left;
+			right: $photo-photogallery-p-padding-right;
+		}
+	}
+}
+
+.second_main_pic {
+	float: right;
+}
+
+div.col-1-2-4 {
+	img {
+		max-width: 350px;
+		width: 95%;
+		display: block;
+	    // Nest the margin property
+	    margin: {
+	    	left: auto;
+	    	right: auto;
+	    }
+	}
+
+	p {
+		width: 95%;
+		// Nest the padding property
+		padding: {
+			left: 5%;
+			right: 2%;
+		}
+		font-family: 'Lato', sans-serif;
+		color: $primary-light-text-color;
+	}
+}
+
+.col-1-2-4 h3 {
+	color: $primary-heading-text-color;
+}
+
+@include set-footer($footer-padding-top, $footer-padding-bottom, $footer-padding-left, $footer-padding-right,
+					$footer-margin-top, $footer-margin-bottom, $footer-margin-left, $footer-margin-right);
+
+/* grid system */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* media queries */
+/* Desktop Screen Sizes */
+/* Pixel Range: >= $min-desktop-width */
+// Now using foundation breakpoint() mixin
+@media only screen and #{breakpoint(xlarge)}  {
+
+	// Nesting the main tag
+	main {
+	
+		@include set-selector-props(h2, $main-base-h2-font-size, $main-desktop-width-h2-font-size-scale-factor,
+										$main-base-h2-line-height, $main-desktop-width-h2-line-height-scale-factor,
+										$main-base-h2-padding, $main-desktop-width-h2-padding-scale-factor);
+
+		@include set-selector-props(p, $main-base-p-font-size, $main-desktop-width-p-font-size-scale-factor,
+										$main-base-p-line-height, $main-desktop-width-p-line-height-scale-factor,
+										$main-base-p-margin, $main-desktop-width-p-margin-scale-factor);	
+
+		@include set-selector-img-props(0%, 1%, 1%, 1.4em);
+	}
+
+	// Nesting the div.photogallery class
+	div.photogallery {
+
+		@include set-selector-props(h2, $photo-base-h2-font-size, $photo-desktop-width-h2-font-size-scale-factor,
+										$photo-base-h2-line-height, $photo-desktop-width-h2-line-height-scale-factor,
+										$photo-base-h2-padding, $photo-desktop-width-h2-padding-scale-factor);
+
+		@include set-selector-props(p, $photo-base-p-font-size, $photo-desktop-width-p-font-size-scale-factor,
+										$photo-base-p-line-height, $photo-desktop-width-p-line-height-scale-factor,
+										$photo-base-p-margin, $photo-desktop-width-p-margin-scale-factor);
+	}
+
+	// Set col-1-2-4 properties
+	@include set-col-1-2-4-props(1.25em,1.02,1.02);
+
+	// Adjust orbit gallery width based on screen width
+	.pondgallery {
+		width: 50%;
+		margin: 0 auto;
+	}
+
+	// Set main login div min height depending on screen width
+	.login-min-height {
+		min-height: 625px;
+	}
+}
+
+/* Tablet Screen Sizes */
+/* pixel range: $min-tablet-width - ($min-desktop-width - 1) */
+// Now using foundation breakpoint() mixin
+@media only screen and #{breakpoint(large)} and #{breakpoint(xlarge down)} {
+
+	// Nesting the main tag
+	main {
+
+		@include set-selector-props(h2, $main-base-h2-font-size, $main-tablet-width-h2-font-size-scale-factor,
+										$main-base-h2-line-height, $main-tablet-width-h2-line-height-scale-factor,
+										$main-base-h2-padding, $main-tablet-width-h2-padding-scale-factor);
+
+		@include set-selector-props(p, $main-base-p-font-size, $main-tablet-width-p-font-size-scale-factor,
+										$main-base-p-line-height, $main-tablet-width-p-line-height-scale-factor,
+										$main-base-p-margin, $main-tablet-width-p-margin-scale-factor);	
+		img {
+			// Nest Padding Property
+			padding: {
+				top: $main-tablet-width-img-padding-top;
+				left: $main-tablet-width-img-padding-left;
+			}
+			margin-right: 1.3em;
+			float: left;
+		}
+	}
+
+	// Nesting the div.photogallery class
+	div.photogallery {
+
+		@include set-selector-props(h2, $photo-base-h2-font-size, $photo-tablet-width-h2-font-size-scale-factor,
+										$photo-base-h2-line-height, $photo-tablet-width-h2-line-height-scale-factor,
+										$photo-base-h2-padding, $photo-tablet-width-h2-padding-scale-factor);
+
+		@include set-selector-props(p, $photo-base-p-font-size, $photo-tablet-width-p-font-size-scale-factor,
+										$photo-base-p-line-height, $photo-tablet-width-p-line-height-scale-factor,
+										$photo-base-p-margin,$photo-tablet-width-p-margin-scale-factor);
+	}
+
+	// Set col-1-2-4 properties
+	@include set-col-1-2-4-props(1.1em,1.05,1.05);
+
+	// Adjust orbit gallery width based on screen width
+	.pondgallery {
+		width: 65%;
+		margin: 0 auto;
+	}
+
+	// Set main login div min height depending on screen width
+	.login-min-height {
+		min-height: 625px;
+	}
+}
+
+
+/* Mobile Landscape Screen Sizes */
+/* pixel range: $min-phone-landscape-width - ($min-tablet-width - 1) */
+// Now using foundation breakpoint() mixin
+@media only screen and #{breakpoint(medium)} and #{breakpoint(large down)} {
+
+  // Nesting the main tag
+  main {
+
+    @include set-selector-props(h2, $main-base-h2-font-size, $main-phone-landscape-width-h2-font-size-scale-factor,
+                    $main-base-h2-line-height, $main-phone-landscape-width-h2-line-height-scale-factor,
+                    $main-base-h2-padding, $main-phone-landscape-width-h2-padding-scale-factor);
+
+    @include set-selector-props(p, $main-base-p-font-size, $main-phone-landscape-width-p-font-size-scale-factor,
+                    $main-base-p-line-height, $main-phone-landscape-width-p-line-height-scale-factor,
+                    $main-base-p-margin, $main-phone-landscape-width-p-margin-scale-factor);
+    img {
+      // Nest img padding
+      padding: {
+        top: $main-phone-landscape-width-img-padding-top;
+        left: $main-phone-landscape-width-img-padding-left;
+      }
+      margin-right: 1em;
+      float: left;
+    }
+  }
+
+  // Nesting the div.photogallery class
+  div.photogallery {
+
+    @include set-selector-props(h2, $photo-base-h2-font-size, $photo-phone-landscape-width-h2-font-size-scale-factor,
+                    $photo-base-h2-line-height, $photo-phone-landscape-width-h2-line-height-scale-factor,
+                    $photo-base-h2-padding, $photo-phone-landscape-width-h2-padding-scale-factor);
+
+    @include set-selector-props(p, $photo-base-p-font-size, $photo-phone-landscape-width-p-font-size-scale-factor,
+                    $photo-base-p-line-height, $photo-phone-landscape-width-p-line-height-scale-factor,
+                    $photo-base-p-margin, $photo-phone-landscape-width-p-margin-scale-factor);
+  }
+
+  // Set col-1-2-4 properties
+  @include set-col-1-2-4-props(1.25em,1.02,1.05);
+
+	// Adjust orbit gallery width based on screen width
+	.pondgallery {
+		width: 85%;
+		margin: 0 auto;
+	}
+
+	// Set main login div min height depending on screen width
+	.login-min-height {
+		min-height: 625px;
+	}  
+}
+
+/* Mobile portrait Screen Sizes */
+/* pixel range: <= ($min-phone-landscape-width - 1) */
+// Now using foundation breakpoint() mixin
+@media only screen and #{breakpoint(medium down)} {
+  
+  // Nesting the header tag
+  header {  
+    h1 {
+      padding: 0.5em;
+      margin: 0;
+    }
+    h1 a {
+      color: $primary-header-text-color;
+      text-decoration: none;
+    }
+  }
+
+  // Nesting the main tag
+  main {
+
+    @include set-selector-props(h2, $main-base-h2-font-size, $main-phone-portrait-width-h2-font-size-scale-factor,
+                    $main-base-h2-line-height, $main-phone-portrait-width-h2-line-height-scale-factor,
+                    $main-base-h2-padding, $main-phone-portrait-width-h2-padding-scale-factor);
+    p {
+      font-size: 1em;
+      line-height: 1.15em;
+      text-align: center;
+    }
+    img {
+      width: 100%;
+      // Nest img padding
+      padding: {
+        top: $main-phone-portrait-width-img-padding-top;
+        left: $main-phone-portrait-width-img-padding-top;
+        right: $main-phone-portrait-width-img-padding-right;
+      }
+      margin: 0 auto;
+      float: none;
+    }
+  }
+
+  div.photogallery {
+
+    @include set-selector-props(h2, $photo-base-h2-font-size, $photo-phone-portrait-width-h2-font-size-scale-factor,
+                    $photo-base-h2-line-height, $photo-phone-portrait-width-h2-line-height-scale-factor,
+                    $photo-base-h2-padding, $photo-phone-portrait-width-h2-padding-scale-factor);
+    p {
+      font-size: 1em;
+      line-height: 1.15em;
+      text-align: center;
+    }
+  }
+
+  .first_main_pic, .second_main_pic {
+    float: none;
+  }
+
+  // Nesting the .col-1-2-4 class
+  .col-1-2-4 {
+    h3 {
+      font-size: 1.25em;
+      margin: 0 auto;
+      text-align: center;
+    }
+    p {
+      margin-left:2%;
+      margin-right:2%;
+    }
+  }
+
+	.pondgallery {
+		width: 95%;
+		margin: 0 auto;
+	}
+
+	// Set main login div min height depending on screen width
+	// As weather bar is not shown in small screen size, set min-height very small
+	.login-min-height {
+		min-height: 25px;
+	}  
+
+}

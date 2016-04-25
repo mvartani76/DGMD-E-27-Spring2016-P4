@@ -1,0 +1,58 @@
+// Menu Overrides
+
+.menu {
+  background-color: $secondary-background-color;
+}
+.menu {
+  margin: 0;
+  padding: 0;
+}
+.menu li {
+  font-family: 'Lato', sans-serif;
+}
+.menu a {
+  color: $menu-link-color;
+  text-decoration: none;
+  font-weight: bold;
+  //float: left;
+}
+.menu a:hover, .menu li.active a {
+  color: $menu-toggle-hover-active-color;
+}
+
+.menu li.non-active a {
+  color: $menu-link-color;
+}
+
+/* media queries */
+
+/* Desktop Screen Sizes */
+/* Pixel Range: >= $min-desktop-width; */
+// Now using foundation breakpoint() mixin
+@media only screen and #{breakpoint(xlarge)} {
+	// Use set-menu-a-props() mixin to set the font-size and padding properties
+	@include set-menu-a-props($menu-desktop-width-a-font-size, $menu-desktop-width-a-padding);	
+}
+
+/* Tablet Screen Sizes */
+/* Pixel Range: >= $min-tablet-width; */
+// Now using foundation breakpoint() mixin
+@media only screen and #{breakpoint(large)} and #{breakpoint(xlarge down)} {
+	// Use set-menu-a-props() mixin to set the font-size and padding properties
+	@include set-menu-a-props($menu-tablet-width-a-font-size, $menu-tablet-width-a-padding);
+}
+
+/* Mobile Landscape Screen Sizes */
+/* pixel range: $min-phone-landscape-width-($min-tablet-width - 1) */
+// Now using foundation breakpoint() mixin
+@media only screen and #{breakpoint(medium)} and #{breakpoint(large down)}  {
+	// Use set-menu-a-props() mixin to set the font-size and padding properties
+	@include set-menu-a-props($menu-phone-landscape-width-a-font-size, $menu-phone-landscape-width-a-padding);
+}
+
+/* Mobile portrait Screen Sizes */
+/* pixel range: <=($min-phone-landscape-width - 1) */
+// Now using foundation breakpoint() mixin
+@media only screen and #{breakpoint(medium down)}  {
+
+}
