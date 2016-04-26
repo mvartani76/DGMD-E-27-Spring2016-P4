@@ -1,3 +1,31 @@
+/* Configure the flexbox container: */
+/* Flex direction is row and wrap is enabled */
 .photoflexcontainer {
+	padding: 3px;
 	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+/* Configure the flexbox child item */
+.photoflexchild {
+	flex: auto;
+	width: 300px;
+	margin: 3px;
+}
+
+/* Configure the image to have the same width */
+/* as the flex child item */
+.photoflexchild img {
+	width: 100%;
+}
+
+/* Mobile Landscape Screen Sizes and smaller */
+/* pixel range: <767px */
+@media only screen and (max-width: $min-tablet-width)  {
+	/* Shrink the width of the child flex item to 150px to get more images */
+	/* in the smaller screen sizes */
+	.photoflexchild {
+		width: 150px;
+	}
 }
