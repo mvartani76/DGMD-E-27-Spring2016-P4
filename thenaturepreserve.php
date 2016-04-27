@@ -47,6 +47,27 @@
 				</ul>
 			</div>
 		</div>
+		<div class="row">
+		<div class="top-bar">
+			<ul class="nav-flex">
+				<li class="nav-link-flex"><a href="./index.php">Home</a></li>
+				<li class="nav-link-flex"><a href="#">About</a></li>
+				<li class="nav-link-flex"><a href="./thingstodo.php">Things to Do</a></li>
+				<li class="nav-link-flex active"><a href="./photogallery.php">Photo Gallery</a></li>
+				<!-- Login/Register is a dropdown menu and contains submenus for Login and Register -->
+				<li class="nav-link-flex">
+					<a href="">Login/Register</a>
+					<div>
+        			<ul class="nav-flex-dropdown">
+						<li><a href="./login.php">Login</a></li>
+						<li><a href="./register.php">Register</a></li>
+					</ul>
+					</div>
+    			</li>
+				<li class="nav-link-flex"><a href="./contact.php">Contact Us</a></li>
+			</ul>
+		</div>
+		</div>
 		<div class="row photogallery">
 			<h2>The Shores of Glenwood Nature Preserve</h2>
 			<p>We are very fortunate to have a protected wildlife preserve in our subdivision. This gallery attempts to visually capture the preserve as nature begins to show its beautiful growth for spring. </p>
