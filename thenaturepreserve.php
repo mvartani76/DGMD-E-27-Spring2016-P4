@@ -25,8 +25,9 @@
 		</div>
 
 		<!-- Flexbox styled navigation menu -->
+		<!-- Needed to remove top-bar as it is using flexbox as well and we need to 
+		 	 all the flexbox ourselves for this exercise. -->
 		<div class="row">
-			<div class="top-bar">
 				<ul class="nav-flex">
 					<li class="nav-link-flex"><a href="./index.php">Home</a></li>
 					<li class="nav-link-flex"><a href="#">About</a></li>
@@ -44,9 +45,8 @@
 	    			</li>
 					<li class="nav-link-flex"><a href="./contact.php">Contact Us</a></li>
 				</ul>
-			</div>
 		</div>
-		
+
 		<div class="row photogallery">
 			<h2>The Shores of Glenwood Nature Preserve</h2>
 			<p>We are very fortunate to have a protected wildlife preserve in our subdivision. This gallery attempts to visually capture the preserve as nature begins to show its beautiful growth for spring. </p>

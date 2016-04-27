@@ -2,6 +2,8 @@
     display: flex;
     list-style-type: none;
     padding: 0;
+	// Needed to set margin to 0 to get the menu aligned
+    margin: 0;
     background-color: $secondary-background-color;
 
     li {
@@ -18,7 +20,7 @@
 
 .nav-link-flex {
     display: flex;
-    padding: 0 12.5px;
+    padding: 0 5px;
     //position: relative;
     flex-direction: column;
 
