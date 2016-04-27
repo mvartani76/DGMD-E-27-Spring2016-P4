@@ -23,51 +23,30 @@
 				[img/sog-entrance-1200.jpg, xlarge]">
 			<noscript><img src="img/sog-entrance-800.jpg.jpg"></noscript>
 		</div>
-		
-		<div class="title-bar" data-responsive-toggle="nav-menu" data-hide-for="medium">
-			<button class="menu-icon" type="button" data-toggle></button>
-			<div class="title-bar-title">Menu</div>
-		</div>
 
+		<!-- Flexbox styled navigation menu -->
 		<div class="row">
-			<div class="top-bar" id="nav-menu">
-				<ul class=" medium-horizontal vertical dropdown menu" data-responsive-menu="accordion medium-dropdown">
-					<li><a href="./index.php">Home</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="./thingstodo.php">Things to Do</a></li>
-					<li class="active"><a href="./photogallery.php">Photo Gallery</a></li>
+			<div class="top-bar">
+				<ul class="nav-flex">
+					<li class="nav-link-flex"><a href="./index.php">Home</a></li>
+					<li class="nav-link-flex"><a href="#">About</a></li>
+					<li class="nav-link-flex"><a href="./thingstodo.php">Things to Do</a></li>
+					<li class="nav-link-flex active"><a href="./photogallery.php">Photo Gallery</a></li>
 					<!-- Login/Register is a dropdown menu and contains submenus for Login and Register -->
-					<li class="has-submenu"><a href="#">Login/Register</a>
-						<ul class="submenu menu vertical nested" data-submenu>
-      						<li><a href="./login.php">Login</a></li>
-      						<li><a href="./register.php">Register</a></li>
-    					</ul>
-    				</li>
-					<li><a href="./contact.php">Contact Us</a></li>
+					<li class="nav-link-flex">
+						<a href="">Login/Register</a>
+						<div>
+	        			<ul class="nav-flex-dropdown">
+							<li><a href="./login.php">Login</a></li>
+							<li><a href="./register.php">Register</a></li>
+						</ul>
+						</div>
+	    			</li>
+					<li class="nav-link-flex"><a href="./contact.php">Contact Us</a></li>
 				</ul>
 			</div>
 		</div>
-		<div class="row">
-		<div class="top-bar">
-			<ul class="nav-flex">
-				<li class="nav-link-flex"><a href="./index.php">Home</a></li>
-				<li class="nav-link-flex"><a href="#">About</a></li>
-				<li class="nav-link-flex"><a href="./thingstodo.php">Things to Do</a></li>
-				<li class="nav-link-flex active"><a href="./photogallery.php">Photo Gallery</a></li>
-				<!-- Login/Register is a dropdown menu and contains submenus for Login and Register -->
-				<li class="nav-link-flex">
-					<a href="">Login/Register</a>
-					<div>
-        			<ul class="nav-flex-dropdown">
-						<li><a href="./login.php">Login</a></li>
-						<li><a href="./register.php">Register</a></li>
-					</ul>
-					</div>
-    			</li>
-				<li class="nav-link-flex"><a href="./contact.php">Contact Us</a></li>
-			</ul>
-		</div>
-		</div>
+		
 		<div class="row photogallery">
 			<h2>The Shores of Glenwood Nature Preserve</h2>
 			<p>We are very fortunate to have a protected wildlife preserve in our subdivision. This gallery attempts to visually capture the preserve as nature begins to show its beautiful growth for spring. </p>
