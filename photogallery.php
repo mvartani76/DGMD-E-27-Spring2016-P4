@@ -55,7 +55,7 @@
 		<div class="row" data-equalizer>
 			<div class="col-1-2-4 large-3 medium-6 columns" data-equalizer-watch>
 				<h3>The Nature Preserve</h3>
-			    <a href="#"><img src="img/sog-preserve-entrance-250.jpg" alt="Our Nature Preserve"></a>
+			    <a href="./thenaturepreserve.php"><img src="img/sog-preserve-entrance-250.jpg" alt="Our Nature Preserve"></a>
 			    <p>We are so lucky to have a state nature preserve with a forest, lake and a river with lots of natural wildlife.</p>
 			</div>
 			<div class="col-1-2-4 large-3 medium-6 columns" data-equalizer-watch>
