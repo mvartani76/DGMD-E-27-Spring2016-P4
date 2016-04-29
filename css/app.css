@@ -5873,34 +5873,60 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: #2772B0; }
 
+.header {
+  grid-area: header; }
+
+.css4menu {
+  grid-area: menu; }
+
+.outside-w-wrapper {
+  grid-area: outside-w-wrapper; }
+
+.content {
+  grid-area: content; }
+
+.footer {
+  grid-area: footer;
+  justify-self: stretch; }
+
 .wrapper {
   width: 97%;
   max-width: 1200px;
   margin: 0 auto;
   float: none;
-  background-color: #EFECCA; }
+  background-color: #EFECCA;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0px;
+  grid-template-areas: "header" "menu" "content" "outside-w-wrapper"           "sidebar" "sidebar2" "footer"; }
 
-header {
+.wrapper {
+  grid-gap: 0px;
+  -ms-grid-columns: 25% 25% 25% 25%;
+      grid-template-columns: 25% 25% 25% 25%;
+  grid-template-areas: "header header header header" "menu menu menu menu" "content content content outside-w-wrapper" "footer footer footer footer"; }
+
+.header {
   font-family: 'Lato', sans-serif;
   color: #FFF; }
 
-main {
+.content {
   overflow: auto;
   background-color: #EFECCA; }
-  main h2 {
+  .content h2 {
     padding-top: 0em;
     background-color: #EFECCA;
     color: #61381D;
     text-align: center;
     font-family: 'Francois One', sans-serif; }
-  main h3, main h4 {
+  .content h3, .content h4 {
     background-color: #EFECCA;
     font-family: 'Francois One', sans-serif; }
-  main p {
+  .content p {
     font-family: 'Lato', sans-serif;
     background-color: #EFECCA;
     color: #BB6F39; }
-  main img {
+  .content img {
     float: left; }
 
 div.photogallery h2 {
@@ -5937,7 +5963,7 @@ div.col-1-2-4 p {
 .col-1-2-4 h3 {
   color: #61381D; }
 
-footer {
+.footer {
   clear: both;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
@@ -5948,7 +5974,8 @@ footer {
   margin-left: 0;
   margin-right: 0;
   color: #999;
-  text-align: center; }
+  text-align: center;
+  background-color: #70482D; }
 
 /* grid system */
 .row::after {
@@ -5960,17 +5987,17 @@ footer {
 /* Desktop Screen Sizes */
 /* Pixel Range: >= $min-desktop-width */
 @media only screen and (min-width: 65.625em) {
-  main h2 {
+  .content h2 {
     font-size: 2.5em;
     line-height: 1.25em;
     padding-left: 0.25em;
     padding-right: 0.25em; }
-  main p {
+  .content p {
     font-size: 1.5em;
     line-height: 1.1em;
     margin-left: 0.25em;
     margin-right: 0.25em; }
-  main img {
+  .content img {
     padding-top: 0%;
     padding-left: 1%;
     padding-bottom: 1%;
@@ -6003,17 +6030,17 @@ footer {
 /* Tablet Screen Sizes */
 /* pixel range: $min-tablet-width - ($min-desktop-width - 1) */
 @media only screen and (min-width: 48em) and (max-width: 74.9375em) {
-  main h2 {
+  .content h2 {
     font-size: 2.25em;
     line-height: 1.2em;
     padding-left: 0.2em;
     padding-right: 0.2em; }
-  main p {
+  .content p {
     font-size: 1.25em;
     line-height: 1.15em;
     margin-left: 0.2em;
     margin-right: 0.2em; }
-  main img {
+  .content img {
     padding-top: 1%;
     padding-left: 1%;
     margin-right: 1.3em;
@@ -6045,17 +6072,17 @@ footer {
 /* Mobile Landscape Screen Sizes */
 /* pixel range: $min-phone-landscape-width - ($min-tablet-width - 1) */
 @media only screen and (min-width: 30em) and (max-width: 50.25em) {
-  main h2 {
+  .content h2 {
     font-size: 1.75em;
     line-height: 1.15em;
     padding-left: 0.15em;
     padding-right: 0.15em; }
-  main p {
+  .content p {
     font-size: 1.1em;
     line-height: 1.1em;
     margin-left: 0.15em;
     margin-right: 0.15em; }
-  main img {
+  .content img {
     padding-top: 1%;
     padding-left: 1%;
     margin-right: 1em;
@@ -6087,22 +6114,22 @@ footer {
 /* Mobile portrait Screen Sizes */
 /* pixel range: <= ($min-phone-landscape-width - 1) */
 @media only screen and (max-width: 31.9375em) {
-  header h1 {
+  .header h1 {
     padding: 0.5em;
     margin: 0; }
-  header h1 a {
+  .header h1 a {
     color: #FFF;
     text-decoration: none; }
-  main h2 {
+  .content h2 {
     font-size: 1.5em;
     line-height: 1.2em;
     padding-left: 0.1em;
     padding-right: 0.1em; }
-  main p {
+  .content p {
     font-size: 1em;
     line-height: 1.15em;
     text-align: center; }
-  main img {
+  .content img {
     width: 100%;
     padding-top: 1%;
     padding-left: 1%;
@@ -6523,7 +6550,6 @@ aside {
     color: #FFF; }
 
 .outside-w-wrapper {
-  display: inline-block;
   background-color: #EEDFAF;
   text-align: center; }
   .outside-w-wrapper h3 {

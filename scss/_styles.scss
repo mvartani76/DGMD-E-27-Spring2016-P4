@@ -32,22 +32,62 @@ a {
 	color: $primary-link-color;
 }
 
+.header {
+	grid-area: header;
+}
+.css4menu {
+	grid-area: menu;
+}
+.outside-w-wrapper {
+	grid-area: outside-w-wrapper;
+}
+
+.content {
+	grid-area: content;
+}
+
+.footer {
+	grid-area: footer;
+	justify-self: stretch;
+}
+
 .wrapper {
 	width: $wrapper-width;
 	max-width: $wrapper-max-width;
 	margin: 0 auto;
 	float: none;
-	background-color: $primary-background-color;	
+	background-color: $primary-background-color;
+
+    display: grid;
+    grid-gap: 0px;
+    grid-template-areas:
+     "header"
+     "menu"
+     "content"
+	"outside-w-wrapper"          
+     "sidebar"
+     "sidebar2"
+     "footer"
 }
 
-header {
+.wrapper {
+	grid-gap: 0px;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-areas:
+	"header header header header"
+	"menu menu menu menu"
+	"content content content outside-w-wrapper"
+	"footer footer footer footer";
+}
+
+.header {
 		font-family: 'Lato', sans-serif; 
 		color: $primary-header-text-color;
 }
 
-// Nesting the main tag
-// Moved the main img from below up into this nested section
-main {
+// Nesting the content div
+// Moved the content img from below up into this nested section
+.content {
 	overflow: auto;
 	background-color: $primary-background-color;
 
@@ -145,7 +185,7 @@ div.col-1-2-4 {
 @media only screen and #{breakpoint(xlarge)}  {
 
 	// Nesting the main tag
-	main {
+	.content {
 	
 		@include set-selector-props(h2, $main-base-h2-font-size, $main-desktop-width-h2-font-size-scale-factor,
 										$main-base-h2-line-height, $main-desktop-width-h2-line-height-scale-factor,
@@ -191,7 +231,7 @@ div.col-1-2-4 {
 @media only screen and #{breakpoint(large)} and #{breakpoint(xlarge down)} {
 
 	// Nesting the main tag
-	main {
+	.content {
 
 		@include set-selector-props(h2, $main-base-h2-font-size, $main-tablet-width-h2-font-size-scale-factor,
 										$main-base-h2-line-height, $main-tablet-width-h2-line-height-scale-factor,
@@ -245,7 +285,7 @@ div.col-1-2-4 {
 @media only screen and #{breakpoint(medium)} and #{breakpoint(large down)} {
 
   // Nesting the main tag
-  main {
+  .content {
 
     @include set-selector-props(h2, $main-base-h2-font-size, $main-phone-landscape-width-h2-font-size-scale-factor,
                     $main-base-h2-line-height, $main-phone-landscape-width-h2-line-height-scale-factor,
@@ -298,7 +338,7 @@ div.col-1-2-4 {
 @media only screen and #{breakpoint(medium down)} {
   
   // Nesting the header tag
-  header {  
+  .header {  
     h1 {
       padding: 0.5em;
       margin: 0;
@@ -310,7 +350,7 @@ div.col-1-2-4 {
   }
 
   // Nesting the main tag
-  main {
+  .content {
 
     @include set-selector-props(h2, $main-base-h2-font-size, $main-phone-portrait-width-h2-font-size-scale-factor,
                     $main-base-h2-line-height, $main-phone-portrait-width-h2-line-height-scale-factor,
