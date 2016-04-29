@@ -16,7 +16,7 @@
 	
 		<!-- Replaced header with row div as this seems to allow the header image to stay
 			 adjacent to the menu when scaling to the different screen sizes. -->
-		<div class="row">
+		<div class="header">
 			<img data-interchange="[img/sog-entrance-500.jpg, small], 
 				[img/sog-entrance-800.jpg, medium], 
 				[img/sog-entrance-1000.jpg, large], 
@@ -24,12 +24,12 @@
 			<noscript><img src="img/sog-entrance-800.jpg.jpg"></noscript>
 		</div>
 
-		<div class="title-bar" data-responsive-toggle="nav-menu" data-hide-for="medium">
-			<button class="menu-icon" type="button" data-toggle></button>
-			<div class="title-bar-title">Menu</div>
-		</div>
+		<div class="css4menu">
+			<div class="title-bar" data-responsive-toggle="nav-menu" data-hide-for="medium">
+				<button class="menu-icon" type="button" data-toggle></button>
+				<div class="title-bar-title">Menu</div>
+			</div>
 
-		<div class="row">
 			<div class="top-bar" id="nav-menu">
 				<ul class=" medium-horizontal vertical dropdown menu" data-responsive-menu="accordion medium-dropdown">
 					<li><a href="./index.php">Home</a></li>
@@ -48,8 +48,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="row" data-equalizer>
-			<main class="xlarge-9 large-9 medium-9 small-12 columns register_id-background-color" data-equalizer-watch>
+		<div class="content">
 				<form class="register_id" data-abide novalidate method="post">
 					<h3>Registration</h3>
 				    <h4>Please fill out the information below to register with the Shores of Glenwood site...</h4>
@@ -79,8 +78,8 @@
 				      <button name="submit" type="submit" class="button my-secondary-background expanded" id="register-submit" data-submit="...Sending">Submit</button>
 				    </fieldset>
 			  	</form>
-			</main>
-			<div class="outside-w-wrapper xlarge-3 large-3 medium-3 columns hide-for-small-only" data-equalizer-watch>
+		</div>
+			<div class="outside-w-wrapper">
 				<h3>Local Time &amp; Weather</h3>
 				<p>
 					<?php
@@ -131,11 +130,9 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="row">
-	    <footer class="xlarge-12 large-12 medium-12 columns">
-	    	<p>&copy; 2016 Shores of Glenwood Neighborhood Association </p>
-	    </footer>
+		<div class="footer">
+			<p>&copy; 2016 Shores of Glenwood Neighborhood Association </p>
+		</div>
 	</div>
 
 	<!-- Specific code for configuring the openweather data to the subdivision location -->
