@@ -14,8 +14,6 @@
   <body>
 	<div class="wrapper">
 	
-		<!-- Replaced header with row div as this seems to allow the header image to stay
-			 adjacent to the menu when scaling to the different screen sizes. -->
 		<div class="header">
 			<img data-interchange="[img/sog-entrance-500.jpg, small], 
 				[img/sog-entrance-800.jpg, medium], 
@@ -49,40 +47,39 @@
 			</div>
 		</div>
 		<div class="content">
-				<form class="register_id" data-abide novalidate method="post">
-					<h3>Registration</h3>
-				    <h4>Please fill out the information below to register with the Shores of Glenwood site...</h4>
-				    <div class="form50">
-				      <fieldset><input placeholder="First Name" id="firstname" name="firstname" type="text" tabindex="1" required autofocus><span class="form-error">First Name is Required</span></fieldset>
-				      <fieldset><input placeholder="Last Name" id="lastname" name="lastname" type="text" tabindex="2" required><span class="form-error">Last Name is Required</span></fieldset>
-				      <fieldset><input placeholder="Street Address 1" id="streetaddr1" name="streetaddr1" type="text" tabindex="3" required><span class="form-error">Street Address is Required</span></fieldset>
-				      <fieldset><input placeholder="Street Address 2" id="streetaddr2" name="streetaddr2" type="text" tabindex="4"></fieldset>
-				      <fieldset><input placeholder="City" id="city" name="city" type="text" tabindex="5" required><span class="form-error">City is Required</span></fieldset>
-				      <fieldset><input placeholder="State/Province" id="state_prov" name="state_prov" type="text" tabindex="6" required><span class="form-error">State/Province is Required</span></fieldset>
-				      <fieldset><input placeholder="Zip Code / Postal Code" id="zip_post_code" name="zip_post_code" type="text" tabindex="7" required><span class="form-error">Zip Code / Postal Code is Required</span></fieldset>
-				      <fieldset><input placeholder="Country" id="country" name="country" type="text" tabindex="8" required><span class="form-error">Country is Required</span></fieldset>
-				    </div>
-				    <div class="form50">
-				      <fieldset><input placeholder="Your Email Address" id="emailaddr" name="emailaddr" type="email" tabindex="9" required><span class="form-error">Correct Email Address is Required</span></fieldset>
-				      <fieldset><input placeholder="Confirm Email Address" id="confirmemailaddr" name="confirmemailaddr" type="email" tabindex="10" required data-equalto="email"><span class="form-error">Emails do not Match</span></fieldset>
-				      <fieldset><input placeholder="Your Phone Number" id="phonenumber" name="phonenumber" type="tel" tabindex="11" required><span class="form-error">Phone Number is Required</span></fieldset>
-				      <fieldset><input placeholder="Desired Username" id="username" name="username" type="text" tabindex="13" required><span class="form-error">Username is Required</span></fieldset>
-				      <fieldset><input placeholder="Password" id="userpassword" name="userpassword" type="password" tabindex="14" required><span class="form-error">Password is Required</span></fieldset>
-				      <fieldset><input placeholder="Confirm Password" id="confirmuserpassword" name="confirmuserpassword" type="password" tabindex="15" required pattern="alpha_numeric" data-equalto="password">
-				      <span class="form-error">Passwords do not Match</span></fieldset>
-				    </div>
-				    <fieldset>
-						<div data-abide-error class="alert callout" style="display: none;">
-							<p class="callout.alert"><i class="fi-alert"></i> There are some errors in your form.</p>
-						</div>				    
-				      <button name="submit" type="submit" class="button my-secondary-background expanded" id="register-submit" data-submit="...Sending">Submit</button>
-				    </fieldset>
-			  	</form>
+			<form class="register_id" data-abide novalidate method="post">
+				<h3>Registration</h3>
+			    <h4>Please fill out the information below to register with the Shores of Glenwood site...</h4>
+			    <div class="form50">
+					<fieldset><input placeholder="First Name" id="firstname" name="firstname" type="text" tabindex="1" required autofocus><span class="form-error">First Name is Required</span></fieldset>
+					<fieldset><input placeholder="Last Name" id="lastname" name="lastname" type="text" tabindex="2" required><span class="form-error">Last Name is Required</span></fieldset>
+					<fieldset><input placeholder="Street Address 1" id="streetaddr1" name="streetaddr1" type="text" tabindex="3" required><span class="form-error">Street Address is Required</span></fieldset>
+					<fieldset><input placeholder="Street Address 2" id="streetaddr2" name="streetaddr2" type="text" tabindex="4"></fieldset>
+					<fieldset><input placeholder="City" id="city" name="city" type="text" tabindex="5" required><span class="form-error">City is Required</span></fieldset>
+					<fieldset><input placeholder="State/Province" id="state_prov" name="state_prov" type="text" tabindex="6" required><span class="form-error">State/Province is Required</span></fieldset>
+					<fieldset><input placeholder="Zip Code / Postal Code" id="zip_post_code" name="zip_post_code" type="text" tabindex="7" required><span class="form-error">Zip Code / Postal Code is Required</span></fieldset>
+					<fieldset><input placeholder="Country" id="country" name="country" type="text" tabindex="8" required><span class="form-error">Country is Required</span></fieldset>
+				</div>
+				<div class="form50">
+					<fieldset><input placeholder="Your Email Address" id="emailaddr" name="emailaddr" type="email" tabindex="9" required><span class="form-error">Correct Email Address is Required</span></fieldset>
+					<fieldset><input placeholder="Confirm Email Address" id="confirmemailaddr" name="confirmemailaddr" type="email" tabindex="10" required data-equalto="email"><span class="form-error">Emails do not Match</span></fieldset>
+					<fieldset><input placeholder="Your Phone Number" id="phonenumber" name="phonenumber" type="tel" tabindex="11" required><span class="form-error">Phone Number is Required</span></fieldset>
+					<fieldset><input placeholder="Desired Username" id="username" name="username" type="text" tabindex="13" required><span class="form-error">Username is Required</span></fieldset>
+					<fieldset><input placeholder="Password" id="userpassword" name="userpassword" type="password" tabindex="14" required><span class="form-error">Password is Required</span></fieldset>
+					<fieldset><input placeholder="Confirm Password" id="confirmuserpassword" name="confirmuserpassword" type="password" tabindex="15" required pattern="alpha_numeric" data-equalto="password"><span class="form-error">Passwords do not Match</span></fieldset>
+				</div>
+				<fieldset>
+					<div data-abide-error class="alert callout" style="display: none;">
+						<p class="callout.alert"><i class="fi-alert"></i> There are some errors in your form.</p>
+					</div>				    
+					<button name="submit" type="submit" class="button my-secondary-background expanded" id="register-submit" data-submit="...Sending">Submit</button>
+				</fieldset>
+			</form>
 		</div>
-			<div class="outside-w-wrapper">
-				<h3>Local Time &amp; Weather</h3>
-				<p>
-					<?php
+		<div class="outside-w-wrapper">
+			<h3>Local Time &amp; Weather</h3>
+			<p>
+				<?php
 					// Return date/time info of a timestamp; then format the output
 					date_default_timezone_set('America/New_York');
 					
@@ -95,39 +92,38 @@
 	   				echo date('h:i A',strtotime($currenttime));
 	   				echo "<br>";
 	   				echo "<br>";
-					?>
-				</p>
-				<!-- This is the placeholder html code to insert the openweather code using javascript
-				I thought this would be a nice touch to add to a neighborhood community website...
-				This code was inspired from the following links:
-				https://github.com/michael-lynch/open-weather
-				http://openweathermap.org/
+				?>
+			</p>
+			<!-- This is the placeholder html code to insert the openweather code using javascript
+			I thought this would be a nice touch to add to a neighborhood community website...
+			This code was inspired from the following links:
+			https://github.com/michael-lynch/open-weather
+			http://openweathermap.org/
 
-				Unfortunately, my city does not show up on the database so it chose the closest city to it... -->				
-				<div class="weather-wrapper">
-					<img src="#" class="weather-icon" alt="Weather Icon" />
+			Unfortunately, my city does not show up on the database so it chose the closest city to it... -->				
+			<div class="weather-wrapper">
+				<img src="#" class="weather-icon" alt="Weather Icon" />
 			
-					<p><strong>Place</strong><br>
-					<span class="weather-place"></span></p>
+				<p><strong>Place</strong><br>
+				<span class="weather-place"></span></p>
 			
-					<p><strong>Temperature</strong>
-					<br><span class="weather-temperature"></span></p>
+				<p><strong>Temperature</strong>
+				<br><span class="weather-temperature"></span></p>
 					
-					<p><strong>Description</strong>
-					<br><span class="weather-description capitalize"></span></p>
+				<p><strong>Description</strong>
+				<br><span class="weather-description capitalize"></span></p>
 					
-					<p><strong>Humidity</strong>
-					<br><span class="weather-humidity"></span></p>
+				<p><strong>Humidity</strong>
+				<br><span class="weather-humidity"></span></p>
 					
-					<p><strong>Wind speed</strong>
-					<br><span class="weather-wind-speed"></span></p>
+				<p><strong>Wind speed</strong>
+				<br><span class="weather-wind-speed"></span></p>
 					
-					<p><strong>Sunrise</strong>
-					<br><span class="weather-sunrise"></span></p>
+				<p><strong>Sunrise</strong>
+				<br><span class="weather-sunrise"></span></p>
 					
-					<p><strong>Sunset</strong>
-					<br><span class="weather-sunset"></span></p>
-				</div>
+				<p><strong>Sunset</strong>
+				<br><span class="weather-sunset"></span></p>
 			</div>
 		</div>
 		<div class="footer">

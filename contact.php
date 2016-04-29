@@ -48,64 +48,62 @@
 			</div>
 		</div>
 		<div class="content">
-			  <form class="contact_id" data-abide novalidate method="post">
-			    <h3>Quick Contact</h3>
-			    <h4>We would love to hear from you! Please contact us today, and get reply with in 24 hours!</h4>
-			    <fieldset><input type="text" placeholder="First Name" id="firstname" name="firstname" tabindex="1" required>
+			<form class="contact_id" data-abide novalidate method="post">
+				<h3>Quick Contact</h3>
+				<h4>We would love to hear from you! Please contact us today, and get reply with in 24 hours!</h4>
+				<fieldset><input type="text" placeholder="First Name" id="firstname" name="firstname" tabindex="1" required>
 					<span class="form-error">
 						First Name is required.
 					</span>
-			    </fieldset>
-			    <fieldset><input type="text" placeholder="Last Name" id="lastname" name="lastname" tabindex="2" required>
+				</fieldset>
+				<fieldset><input type="text" placeholder="Last Name" id="lastname" name="lastname" tabindex="2" required>
 					<span class="form-error">
 						Last Name is required.
 					</span>
-			    </fieldset>
-			    <fieldset><input placeholder="Your Email Address" id="emailaddr" name="emailaddr" type="email" tabindex="3" required>
+				</fieldset>
+				<fieldset><input placeholder="Your Email Address" id="emailaddr" name="emailaddr" type="email" tabindex="3" required>
 					<span class="form-error">
 						Email Address is required.
 					</span>
-			    </fieldset>
+				</fieldset>
 
-			    <fieldset><input placeholder="Your Phone Number" id="phonenumber" name="phonenumber" type="tel" tabindex="4" required>
+				<fieldset><input placeholder="Your Phone Number" id="phonenumber" name="phonenumber" type="tel" tabindex="4" required>
 					<span class="form-error">
 						Phone Number is required.
 					</span>
-			    </fieldset>
-
-				<fieldset><h4>What type of message do you want to send?</h4>
-				    <input type="radio" id="dept1" name="dept" value="general" tabindex="6" checked> General
-				    <input type="radio" id="dept2" name="dept" value="dues" tabindex="7"> Dues
-				    <input type="radio" id="dept3" name="dept" value="complaint" tabindex="8"> Complaint
-				    <input type="radio" id="dept4" name="dept" value="technical" tabindex="9"> Technical
 				</fieldset>
 
-			    <fieldset><textarea placeholder="Type your Message Here...." tabindex="10" required></textarea>
+				<fieldset><h4>What type of message do you want to send?</h4>
+					<input type="radio" id="dept1" name="dept" value="general" tabindex="6" checked> General
+					<input type="radio" id="dept2" name="dept" value="dues" tabindex="7"> Dues
+					<input type="radio" id="dept3" name="dept" value="complaint" tabindex="8"> Complaint
+					<input type="radio" id="dept4" name="dept" value="technical" tabindex="9"> Technical
+				</fieldset>
+
+				<fieldset><textarea placeholder="Type your Message Here...." tabindex="10" required></textarea>
 					<span class="form-error">
 						Please type your message.
 					</span>
-			    </fieldset>
-			    <h4 class="centerh4">Preferred time for phone contact...</h4>
-			    <div class="form50">
-			    	<fieldset><label>Start Time</label><input id="start_time" name="start_time" type="time" tabindex="11" value="00:00"></fieldset>
+				</fieldset>
+				<h4 class="centerh4">Preferred time for phone contact...</h4>
+				<div class="form50">
+					<fieldset><label>Start Time</label><input id="start_time" name="start_time" type="time" tabindex="11" value="00:00"></fieldset>
 			  	</div>
 				<div class="form50">
-			    	<fieldset><label>End Time</label><input id="end_time" name="end_time" type="time" tabindex="12" value="23:59"></fieldset>
+					<fieldset><label>End Time</label><input id="end_time" name="end_time" type="time" tabindex="12" value="23:59"></fieldset>
 				</div>
-			    <fieldset>
-
+				<fieldset>
 					<div data-abide-error class="alert callout" style="display: none;">
 						<p class="callout.alert"><i class="fi-alert"></i> There are some errors in your form.</p>
 					</div>
-
-			      <button name="submit" type="submit" class="button my-secondary-background expanded" id="contact-submit" data-submit="...Sending">Submit</button>
-			    </fieldset>
-			  </form>
-			  </div>
-			<div class="outside-w-wrapper" data-equalizer-watch>
-				<h3>Local Time &amp; Weather</h3>
-				<p>
-					<?php
+					<button name="submit" type="submit" class="button my-secondary-background expanded" id="contact-submit" data-submit="...Sending">Submit</button>
+				</fieldset>
+			</form>
+		</div>
+		<div class="outside-w-wrapper" data-equalizer-watch>
+			<h3>Local Time &amp; Weather</h3>
+			<p>
+				<?php
 					// Return date/time info of a timestamp; then format the output
 					date_default_timezone_set('America/New_York');
 					
@@ -118,39 +116,38 @@
 	   				echo date('h:i A',strtotime($currenttime));
 	   				echo "<br>";
 	   				echo "<br>";
-					?>
-				</p>
-				<!-- This is the placeholder html code to insert the openweather code using javascript
-				I thought this would be a nice touch to add to a neighborhood community website...
-				This code was inspired from the following links:
-				https://github.com/michael-lynch/open-weather
-				http://openweathermap.org/
+				?>
+			</p>
+			<!-- This is the placeholder html code to insert the openweather code using javascript
+			I thought this would be a nice touch to add to a neighborhood community website...
+			This code was inspired from the following links:
+			https://github.com/michael-lynch/open-weather
+			http://openweathermap.org/
 
-				Unfortunately, my city does not show up on the database so it chose the closest city to it... -->				
-				<div class="weather-wrapper">
-					<img src="#" class="weather-icon" alt="Weather Icon" />
+			Unfortunately, my city does not show up on the database so it chose the closest city to it... -->				
+			<div class="weather-wrapper">
+				<img src="#" class="weather-icon" alt="Weather Icon" />
 			
-					<p><strong>Place</strong><br>
-					<span class="weather-place"></span></p>
+				<p><strong>Place</strong><br>
+				<span class="weather-place"></span></p>
 			
-					<p><strong>Temperature</strong>
-					<br><span class="weather-temperature"></span></p>
+				<p><strong>Temperature</strong>
+				<br><span class="weather-temperature"></span></p>
 					
-					<p><strong>Description</strong>
-					<br><span class="weather-description capitalize"></span></p>
+				<p><strong>Description</strong>
+				<br><span class="weather-description capitalize"></span></p>
 					
-					<p><strong>Humidity</strong>
-					<br><span class="weather-humidity"></span></p>
+				<p><strong>Humidity</strong>
+				<br><span class="weather-humidity"></span></p>
 					
-					<p><strong>Wind speed</strong>
-					<br><span class="weather-wind-speed"></span></p>
+				<p><strong>Wind speed</strong>
+				<br><span class="weather-wind-speed"></span></p>
 					
-					<p><strong>Sunrise</strong>
-					<br><span class="weather-sunrise"></span></p>
+				<p><strong>Sunrise</strong>
+				<br><span class="weather-sunrise"></span></p>
 					
-					<p><strong>Sunset</strong>
-					<br><span class="weather-sunset"></span></p>
-				</div>
+				<p><strong>Sunset</strong>
+				<br><span class="weather-sunset"></span></p>
 			</div>
 		</div>
 		<div class="footer">

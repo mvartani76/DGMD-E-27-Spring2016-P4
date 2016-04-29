@@ -14,8 +14,6 @@
   <body>
 	<div class="wrapper">
 
-		<!-- Replaced header with row div as this seems to allow the header image to stay
-			 adjacent to the menu when scaling to the different screen sizes. -->
 		<div class="header">
 			<img data-interchange="[img/sog-entrance-500.jpg, small], 
 				[img/sog-entrance-800.jpg, medium], 
@@ -51,40 +49,40 @@
 
 		<!-- Use Equalizer to make the main section and weather sidebar equal heights -->
 		<div class="content">
-				<form class="login_id" data-abide novalidate method="post">
-					<h3>Login</h3>
-					<h4>Please enter your username and password to login...</h4>
-					<fieldset>
-						<input type="text" placeholder="Username" id="login_username" name="username" tabindex="1" required>
-						<!-- Throw an error message if username is not entered -->
-						<span class="form-error">
-							Username is required.
-						</span>
-					</fieldset>
+			<form class="login_id" data-abide novalidate method="post">
+				<h3>Login</h3>
+				<h4>Please enter your username and password to login...</h4>
+				<fieldset>
+					<input type="text" placeholder="Username" id="login_username" name="username" tabindex="1" required>
+					<!-- Throw an error message if username is not entered -->
+					<span class="form-error">
+						Username is required.
+					</span>
+				</fieldset>
 
-					<fieldset>
-						<input placeholder="Password" id="password" name="userpassword" type="password" tabindex="2" required>
-						<!-- Throw and error messiage if password is not entered -->
-						<span class="form-error">
+				<fieldset>
+					<input placeholder="Password" id="password" name="userpassword" type="password" tabindex="2" required>
+					<!-- Throw and error messiage if password is not entered -->
+					<span class="form-error">
 						Password is required.
-						</span>
-					</fieldset>
+					</span>
+				</fieldset>
 
-					<fieldset>
-						<!-- Use a callout to indicate to user that there are errors in the form -->
-						<div data-abide-error class="alert callout" style="display: none;">
-							<p class="callout.alert"><i class="fi-alert"></i> There are some errors in your form.</p>
-						</div>
+				<fieldset>
+					<!-- Use a callout to indicate to user that there are errors in the form -->
+					<div data-abide-error class="alert callout" style="display: none;">
+						<p class="callout.alert"><i class="fi-alert"></i> There are some errors in your form.</p>
+					</div>
 
-						<!-- Using Foundation Button class with customized color that I added to the color pallette -->
-						<button name="submit" type="submit" class="button my-secondary-background expanded" id="login_id-submit" data-submit="...Sending">Submit</button>
-					</fieldset>
-				</form>
-			</div>
-			<div class="outside-w-wrapper">
-				<h3>Local Time &amp; Weather</h3>
-				<p>
-					<?php
+					<!-- Using Foundation Button class with customized color that I added to the color pallette -->
+					<button name="submit" type="submit" class="button my-secondary-background expanded" id="login_id-submit" data-submit="...Sending">Submit</button>
+				</fieldset>
+			</form>
+		</div>
+		<div class="outside-w-wrapper">
+			<h3>Local Time &amp; Weather</h3>
+			<p>
+				<?php
 					// Return date/time info of a timestamp; then format the output
 					date_default_timezone_set('America/New_York');
 					
@@ -96,39 +94,38 @@
 	   				echo date('h:i A',strtotime($currenttime));
 	   				echo "<br>";
 	   				echo "<br>";
-					?>
-				</p>
-				<!-- This is the placeholder html code to insert the openweather code using javascript
-				I thought this would be a nice touch to add to a neighborhood community website...
-				This code was inspired from the following links:
-				https://github.com/michael-lynch/open-weather
-				http://openweathermap.org/
+				?>
+			</p>
+			<!-- This is the placeholder html code to insert the openweather code using javascript
+			I thought this would be a nice touch to add to a neighborhood community website...
+			This code was inspired from the following links:
+			https://github.com/michael-lynch/open-weather
+			http://openweathermap.org/
 
-				Unfortunately, my city does not show up on the database so it chose the closest city to it... -->				
-				<div class="weather-wrapper">
-					<img src="#" class="weather-icon" alt="Weather Icon" />
+			Unfortunately, my city does not show up on the database so it chose the closest city to it... -->				
+			<div class="weather-wrapper">
+				<img src="#" class="weather-icon" alt="Weather Icon" />
 			
-					<p><strong>Place</strong><br>
-					<span class="weather-place"></span></p>
+				<p><strong>Place</strong><br>
+				<span class="weather-place"></span></p>
 			
-					<p><strong>Temperature</strong>
-					<br><span class="weather-temperature"></span></p>
+				<p><strong>Temperature</strong>
+				<br><span class="weather-temperature"></span></p>
 					
-					<p><strong>Description</strong>
-					<br><span class="weather-description capitalize"></span></p>
+				<p><strong>Description</strong>
+				<br><span class="weather-description capitalize"></span></p>
 					
-					<p><strong>Humidity</strong>
-					<br><span class="weather-humidity"></span></p>
+				<p><strong>Humidity</strong>
+				<br><span class="weather-humidity"></span></p>
 					
-					<p><strong>Wind speed</strong>
-					<br><span class="weather-wind-speed"></span></p>
+				<p><strong>Wind speed</strong>
+				<br><span class="weather-wind-speed"></span></p>
 					
-					<p><strong>Sunrise</strong>
-					<br><span class="weather-sunrise"></span></p>
+				<p><strong>Sunrise</strong>
+				<br><span class="weather-sunrise"></span></p>
 					
-					<p><strong>Sunset</strong>
-					<br><span class="weather-sunset"></span></p>
-				</div>
+				<p><strong>Sunset</strong>
+				<br><span class="weather-sunset"></span></p>
 			</div>
 		</div>
 		<div class="footer">
