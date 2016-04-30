@@ -1,6 +1,6 @@
-// This mixin sets a few parameters for the aside tag
-@mixin thingstodo_aside($h3-font-size, $li-font-size, $li-line-height) {
-	aside {
+// This mixin sets a few parameters for the sidebar div
+@mixin thingstodo_sidebar($h3-font-size, $li-font-size, $li-line-height) {
+	.sidebar {
 		h3 {
 			font-size: $h3-font-size;
 		}

@@ -12,11 +12,9 @@
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   </head>
   <body>
-	<div class="wrapper">
+	<div class="thingstodowrapper">
 
-		<!-- Replaced header with row div as this seems to allow the header image to stay
-			 adjacent to the menu when scaling to the different screen sizes. -->
-		<div class="row">
+		<div class="header">
 			<img data-interchange="[img/sog-entrance-500.jpg, small], 
 				[img/sog-entrance-800.jpg, medium], 
 				[img/sog-entrance-1000.jpg, large], 
@@ -24,12 +22,12 @@
 			<noscript><img src="img/sog-entrance-800.jpg.jpg"></noscript>
 		</div>
 
-		<div class="title-bar" data-responsive-toggle="nav-menu" data-hide-for="medium">
-			<button class="menu-icon" type="button" data-toggle></button>
-			<div class="title-bar-title">Menu</div>
-		</div>
+		<div class="css4menu">
+			<div class="title-bar" data-responsive-toggle="nav-menu" data-hide-for="medium">
+				<button class="menu-icon" type="button" data-toggle></button>
+				<div class="title-bar-title">Menu</div>
+			</div>
 
-		<div class="row">
 			<div class="top-bar" id="nav-menu">
 				<ul class=" medium-horizontal vertical dropdown menu" data-responsive-menu="accordion medium-dropdown">
 					<li><a href="./index.php">Home</a></li>
@@ -47,11 +45,10 @@
 				</ul>
 			</div>
 		</div>
-		<div class="row" data-equalizer>
+		<div class="content" data-equalizer>
 			<!-- Added the xxx-push-3 class which moves this column right 25% to make this display (xxx-6)
 			     display in the middle for screen sizes >479px.
 			     For screen sizes <=479px, they will display in normal order as written. -->
-			<main class="xlarge-6 large-6 medium-6 xlarge-push-3 large-push-3 medium-push-3 columns" data-equalizer-watch>
 				<h2>Things to Do in Commerce Township</h2>
 				
 				<p style="clear: both;">As there are many lakes and rivers nearby, there are many water activities to do here in our community from boating and water skiing to
@@ -143,12 +140,11 @@
 							[img/corn-long-250.jpg, xlarge]">
 						<noscript><img src="img/corn-long-350.jpg"></noscript>								
 					</div>
-
-			</main>
+			</div>
 			<!-- Added the xxx-push-3 class which moves this column right 25% to make this display (xxx-3)
 			     display in the right for screen sizes >479px
 			     For screen sizes <=479px, they will display in normal order as written. -->
-			<div class="xlarge-3 large-3 medium-3 xlarge-push-3 large-push-3 medium-push-3 columns outside-w-wrapper hide-for-small-only" data-equalizer-watch>
+			<div class="outside-w-wrapper" data-equalizer-watch>
 				<h3>Local Time &amp; Weather</h3>
 				<p>
 					<?php
@@ -201,21 +197,20 @@
 			<!-- Added the col-pull-9 class which moves this column left 75% to make this display (xxx-3)
 			     display in the left for screen sizes >479px
 			     For screen sizes <=479px, they will display in normal order as written. -->
-			<aside class="xlarge-3 large-3 medium-3 xlarge-pull-9 large-pull-9 medium-pull-9 columns" data-equalizer-watch>
+			<div class="sidebar" data-equalizer-watch>
 				<h3>Commerce Township Info</h3>
 				<ul>
 					<li><a href="https://en.wikipedia.org/wiki/Commerce_Township,_Michigan" target="_blank">Population:</a> 40,186</li>
-			        <li><a href="https://en.wikipedia.org/wiki/Commerce_Township,_Michigan" target="_blank">Total Area:</a> 29.8 square miles</li>
-			        <li><a href="http://www.distance-cities.com/distance-detroit-mi-to-commerce-township-mi" target="_blank">Miles northwest from Detroit:</a> 28</li>
-			        <li><a href="https://en.wikipedia.org/wiki/Commerce_Township,_Michigan" target="_blank">Number of Households:</a> 12,379</li>
-			        <li><a href="https://en.wikipedia.org/wiki/Commerce_Township,_Michigan" target="_blank">Number of Families:</a> 9,754</li>
-			        <li><a href="https://en.wikipedia.org/wiki/Commerce_Township,_Michigan" target="_blank">Median Household Income:</a> $72,702</li>
-			        <li><a href="https://en.wikipedia.org/wiki/Commerce_Township,_Michigan" target="_blank">Median Family Income:</a> $79,976</li>
-			        <li><a href="https://en.wikipedia.org/wiki/Commerce_Township,_Michigan" target="_blank">Median Age:</a> 36 years</li>
-			        <li><a href="https://en.wikipedia.org/wiki/Commerce_Township,_Michigan" target="_blank">Number of School Districts:</a> 2</li>
-		        </ul>
-			</aside>
-
+					<li><a href="https://en.wikipedia.org/wiki/Commerce_Township,_Michigan" target="_blank">Total Area:</a> 29.8 square miles</li>
+					<li><a href="http://www.distance-cities.com/distance-detroit-mi-to-commerce-township-mi" target="_blank">Miles northwest from Detroit:</a> 28</li>
+					<li><a href="https://en.wikipedia.org/wiki/Commerce_Township,_Michigan" target="_blank">Number of Households:</a> 12,379</li>
+					<li><a href="https://en.wikipedia.org/wiki/Commerce_Township,_Michigan" target="_blank">Number of Families:</a> 9,754</li>
+					<li><a href="https://en.wikipedia.org/wiki/Commerce_Township,_Michigan" target="_blank">Median Household Income:</a> $72,702</li>
+					<li><a href="https://en.wikipedia.org/wiki/Commerce_Township,_Michigan" target="_blank">Median Family Income:</a> $79,976</li>
+					<li><a href="https://en.wikipedia.org/wiki/Commerce_Township,_Michigan" target="_blank">Median Age:</a> 36 years</li>
+					<li><a href="https://en.wikipedia.org/wiki/Commerce_Township,_Michigan" target="_blank">Number of School Districts:</a> 2</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 	<div class="row">

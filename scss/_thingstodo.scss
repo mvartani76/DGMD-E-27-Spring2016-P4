@@ -5,18 +5,18 @@
 @import "thingstodo_variables";
 @import "thingstodo_mixins";
 
-// Nesting the aside tag
-aside {
-	background-color: $thingstodo-aside-background-color;
+// Nesting the sidebar div
+.sidebar {
+	background-color: $thingstodo-sidebar-background-color;
 
 	h3 {
 		font-family: 'Francois One', sans-serif;
-		color: $thingstodo-aside-heading-font-color;
+		color: $thingstodo-sidebar-heading-font-color;
 		text-align: center;
 	}
 
 	ul {
-		padding-left: $thingstodo-aside-padding-left;
+		padding-left: $thingstodo-sidebar-padding-left;
 	}
 
 	li {
@@ -57,32 +57,32 @@ aside {
 /* Pixel Range: >= 1000px; */
 @media only screen and (min-width: $min-desktop-width) {
 
-	// Using thingstodo_aside() mixin to set h3 and li parameters
-	@include thingstodo_aside($thingstodo-desktop-width-h3-font-size, $thingstodo-desktop-width-li-font-size, $thingstodo-desktop-width-li-line-height);
+	// Using thingstodo_sidebar() mixin to set h3 and li parameters
+	@include thingstodo_sidebar($thingstodo-desktop-width-h3-font-size, $thingstodo-desktop-width-li-font-size, $thingstodo-desktop-width-li-line-height);
 }
 
 /* Tablet Screen Sizes */
 /* Pixel Range: >= 768px; */
 @media only screen and (min-width: $min-tablet-width) and (max-width: $min-desktop-width - 1) {
 
-	// Using thingstodo_aside() mixin to set h3 and li parameters
-	@include thingstodo_aside($thingstodo-tablet-width-h3-font-size, $thingstodo-tablet-width-li-font-size, $thingstodo-tablet-width-li-line-height);
+	// Using thingstodo_sidebar() mixin to set h3 and li parameters
+	@include thingstodo_sidebar($thingstodo-tablet-width-h3-font-size, $thingstodo-tablet-width-li-font-size, $thingstodo-tablet-width-li-line-height);
 }
 
 /* Mobile Landscape Screen Sizes */
 /* pixel range: 480-767px */
 @media only screen and (min-width: $min-phone-landscape-width) and (max-width: $min-tablet-width - 1)  {	
 
-	// Using thingstodo_aside() mixin to set h3 and li parameters
-	@include thingstodo_aside($thingstodo-phone-landscape-width-h3-font-size, $thingstodo-phone-landscape-width-li-font-size, $thingstodo-phone-landscape-width-li-line-height);
+	// Using thingstodo_sidebar() mixin to set h3 and li parameters
+	@include thingstodo_sidebar($thingstodo-phone-landscape-width-h3-font-size, $thingstodo-phone-landscape-width-li-font-size, $thingstodo-phone-landscape-width-li-line-height);
 }
 
 /* Mobile Portrait Screen Sizes */
 /* pixel range: <480px */	
 @media only screen and (max-width: $min-phone-landscape-width - 1)  {
 
-	// Using thingstodo_aside() mixin to set h3 and li parameters
-	@include thingstodo_aside($thingstodo-phone-portrait-width-h3-font-size, $thingstodo-phone-portrait-width-li-font-size, $thingstodo-phone-portrait-width-li-line-height);	
+	// Using thingstodo_sidebar() mixin to set h3 and li parameters
+	@include thingstodo_sidebar($thingstodo-phone-portrait-width-h3-font-size, $thingstodo-phone-portrait-width-li-font-size, $thingstodo-phone-portrait-width-li-line-height);	
 
 	/* Keep the columns in the original order in the
 	   mobile portrait mode screen size */	

@@ -5898,13 +5898,36 @@ a {
   display: -ms-grid;
   display: grid;
   grid-gap: 0px;
-  grid-template-areas: "header" "menu" "content" "outside-w-wrapper"           "sidebar" "sidebar2" "footer"; }
+  grid-template-areas: "header" "menu" "content" "outside-w-wrapper" "footer"; }
 
 .wrapper {
   grid-gap: 0px;
   -ms-grid-columns: 25% 25% 25% 25%;
       grid-template-columns: 25% 25% 25% 25%;
   grid-template-areas: "header header header header" "menu menu menu menu" "content content content outside-w-wrapper" "footer footer footer footer"; }
+
+.thingstodowrapper {
+  width: 97%;
+  max-width: 1200px;
+  margin: 0 auto;
+  float: none;
+  background-color: #EFECCA;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0px;
+  grid-template-areas: "header" "menu" "content" "outside-w-wrapper"           "sidebar" "footer"; }
+
+.wrapper {
+  grid-gap: 0px;
+  -ms-grid-columns: 25% 25% 25% 25%;
+      grid-template-columns: 25% 25% 25% 25%;
+  grid-template-areas: "header header header header" "menu menu menu menu" "content content content outside-w-wrapper" "footer footer footer footer"; }
+
+.thingstodowrapper {
+  grid-gap: 0px;
+  -ms-grid-columns: 25% 25% 25% 25%;
+      grid-template-columns: 25% 25% 25% 25%;
+  grid-template-areas: "header header header header" "menu menu menu menu" "sidebar content content outside-w-wrapper" "footer footer footer footer"; }
 
 .header {
   font-family: 'Lato', sans-serif;
@@ -6114,6 +6137,18 @@ div.col-1-2-4 p {
 /* Mobile portrait Screen Sizes */
 /* pixel range: <= ($min-phone-landscape-width - 1) */
 @media only screen and (max-width: 31.9375em) {
+  .wrapper {
+    grid-gap: 0px;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    grid-template-areas: "header" "menu" "content" "footer"; }
+  .thingstodowrapper {
+    grid-gap: 0px;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    grid-template-areas: "header" "menu" "content" "sidebar" "footer"; }
+  .outside-w-wrapper {
+    display: none; }
   .header h1 {
     padding: 0.5em;
     margin: 0; }
@@ -6367,18 +6402,18 @@ form .form50, form .form50 {
     font-size: 1.3em; } }
 
 /* Stylesheet specific to the swapping of columns in thingstodo.php */
-aside {
+.sidebar {
   background-color: #EEDFAF; }
-  aside h3 {
+  .sidebar h3 {
     font-family: 'Francois One', sans-serif;
     color: #61381D;
     text-align: center; }
-  aside ul {
+  .sidebar ul {
     padding-left: 15%; }
-  aside li {
+  .sidebar li {
     font-family: 'Lato', sans-serif;
     color: #BB6F39; }
-  aside p {
+  .sidebar p {
     font-family: 'Lato', sans-serif;
     color: #BB6F39; }
 
@@ -6405,36 +6440,36 @@ aside {
 /* Desktop Screen Sizes */
 /* Pixel Range: >= 1000px; */
 @media only screen and (min-width: 1050px) {
-  aside h3 {
+  .sidebar h3 {
     font-size: 1.5em; }
-  aside li {
+  .sidebar li {
     font-size: 0.9em;
     line-height: 1.5em; } }
 
 /* Tablet Screen Sizes */
 /* Pixel Range: >= 768px; */
 @media only screen and (min-width: 768px) and (max-width: 1049px) {
-  aside h3 {
+  .sidebar h3 {
     font-size: 1.25em; }
-  aside li {
+  .sidebar li {
     font-size: 0.75em;
     line-height: 1.4em; } }
 
 /* Mobile Landscape Screen Sizes */
 /* pixel range: 480-767px */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  aside h3 {
+  .sidebar h3 {
     font-size: 1em; }
-  aside li {
+  .sidebar li {
     font-size: 0.6em;
     line-height: 1.3em; } }
 
 /* Mobile Portrait Screen Sizes */
 /* pixel range: <480px */
 @media only screen and (max-width: 479px) {
-  aside h3 {
+  .sidebar h3 {
     font-size: 1.5em; }
-  aside li {
+  .sidebar li {
     font-size: 0.9em;
     line-height: 1.5em; }
   /* Keep the columns in the original order in the
