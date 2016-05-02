@@ -56,7 +56,7 @@ As everything is incorporated as partials, there is only one generated css file 
 # Assignment Specific Topics
 ## Browser/Operating System
 I primarily used a Google Chrome browser (Version 48.0.2564.116 m) running on a Windows 10 (64 bit) machine and Safari running on an Apple iPhone 6s plus (iOS 9.2.1).
-## Build a Website with Foundation
+## Site background
 I am using the responsive website I built from Assignment 1, added SASS to in Assignment 2, and then added Foundation to in Assignment 3 as a starting point for this assignment.<br>
 The URL for Assignment 1 is: http://dgmd-e27-p1.mikevartanian.me/index.php<br>
 The URL for Assignment 2 is: http://dgmd-e27-p2.mikevartanian.me/index.php<br>
