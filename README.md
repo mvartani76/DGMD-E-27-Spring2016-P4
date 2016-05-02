@@ -21,25 +21,30 @@ The code consists of the following files:
 
 ##SASS Source Files:
 **app.scss** - This is the default foundation sass file that links in all the other partial sass files..<br>
-**_settings.scss** - This is the default settings sass file that has some project specific modifications..<br>
 
 ##SASS Partial Files:
+###Forms
 **_formstyle.scss** - Stylings for the various forms in the site.<br>
 **_form_variables.scss** - Sass variables used in formstyle partial.<br>
 **_form_extends.scss** - Extends used in the formstyle partial.<br>
 **_form_mixins.scss** - Mixins used in the formstyle partial.<br>
+###Thingstodo
 **_thingstodo.scss** - Stylings for the thingstodo page.<br>
 **_thingstodo_variables.scss** - Sass variables used in the thingstodo partial.<br>
 **_thingstodo_mixins.scss** - Mixins used in the thingstodo partial.<br>
+###Weather
 **_weather-style.scss** - Stylings for the weather sidebar.<br>
 **_weather_variables.scss** - Variables used in the weather sidebar partial.<br>
 **_weather_mixins.scss** - Mixins used in the weather sidebar partial.<br>
+###Nature Preserve
 **_naturepreserve.scss** - Stylings specific to the nature preserve gallery.<br>
+###General
 **_helper_functions.scss** Some helper functions for other mixin files.<br>
 **_styles.scss** - General stylings for site pages.<br>
 **_variables.scss** - Variables for site pages.<br>
 **_mixins.scss** - Mixins for the site pages.<br>
 **_overrides.scss** - Foundation overrides in a specific file in order to find easier.<br>
+**_settings.scss** - This is the default settings sass file that has some project specific modifications.<br>
 
 ## Generated CSS Files:
 As everything is incorporated as partials, there is only one generated css file with regards to the work that I am doing.
