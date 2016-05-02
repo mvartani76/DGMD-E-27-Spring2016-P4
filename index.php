@@ -12,7 +12,7 @@
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   </head>
   <body>
-	<div class="wrapper">
+	<div class="indexwrapper">
 
 		<!-- Replaced header with row div as this seems to allow the header image to stay
 			 adjacent to the menu when scaling to the different screen sizes. -->
@@ -126,7 +126,7 @@
 			</div>			
 		</div>
 		<div class="footer">
-	    	<p>&copy; 2016 Shores of Glenwood Neighborhood Association </p>
+			<p>&copy; 2016 Shores of Glenwood Neighborhood Association </p>
 		</div>
 	</div>
 

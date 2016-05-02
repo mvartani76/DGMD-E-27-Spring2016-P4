@@ -213,10 +213,9 @@
 			</div>
 		</div>
 	</div>
-	<div class="row">
-	    <footer class="xlarge-12 large-12 medium-12 columns">
-	    	<p>&copy; 2016 Shores of Glenwood Neighborhood Association </p>
-	    </footer>
+		<div class="footer">
+			<p>&copy; 2016 Shores of Glenwood Neighborhood Association </p>
+		</div>
 	</div>
 
 	<!-- Specific code for configuring the openweather data to the subdivision location -->

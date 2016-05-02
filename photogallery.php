@@ -12,11 +12,9 @@
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   </head>
   <body>
-	<div class="wrapper">
+	<div class="photowrapper">
 
-		<!-- Replaced header with row div as this seems to allow the header image to stay
-			 adjacent to the menu when scaling to the different screen sizes. -->
-		<div class="row">
+		<div class="header">
 			<img data-interchange="[img/sog-entrance-500.jpg, small], 
 				[img/sog-entrance-800.jpg, medium], 
 				[img/sog-entrance-1000.jpg, large], 
@@ -24,12 +22,12 @@
 			<noscript><img src="img/sog-entrance-800.jpg.jpg"></noscript>
 		</div>
 		
-		<div class="title-bar" data-sticky data-options="marginTop:0;" data-responsive-toggle="nav-menu" data-hide-for="medium">
-			<button class="menu-icon" type="button" data-toggle></button>
-			<div class="title-bar-title">Menu</div>
-		</div>
+		<div class="css4menu">
+			<div class="title-bar" data-responsive-toggle="nav-menu" data-hide-for="medium">
+				<button class="menu-icon" type="button" data-toggle></button>
+				<div class="title-bar-title">Menu</div>
+			</div>
 
-		<div class="row">
 			<div class="top-bar" id="nav-menu">
 				<ul class=" medium-horizontal vertical dropdown menu" data-responsive-menu="accordion medium-dropdown">
 					<li><a href="./index.php">Home</a></li>
@@ -47,7 +45,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="row photogallery">
+		<div class="photogallery">
 			<h2>The Shores of Glenwood Photo Gallery</h2>
 			<p>We are all very proud of the beauty and serenity of our neighborhood. Please click on the albums below to see the beauty of the land, the houses, the wildlife, and most importantly, the people of The Shores of Glenwood.</p>
 			<p>We would love for you to share your Shores of Glenwood photo memories with us. Please contact us and we will upload your photos to this site.</p> 

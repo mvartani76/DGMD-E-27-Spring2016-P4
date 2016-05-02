@@ -46,12 +46,24 @@ a {
 	grid-area: content;
 }
 
+.photogallery {
+	grid-area: photogallery;
+}
+
 .footer {
 	grid-area: footer;
 	justify-self: stretch;
 }
 
 .wrapper {
+	width: $wrapper-width;
+	max-width: $wrapper-max-width;
+	margin: 0 auto;
+	float: none;
+	background-color: $primary-background-color;	
+}
+
+.indexwrapper {
 	width: $wrapper-width;
 	max-width: $wrapper-max-width;
 	margin: 0 auto;
@@ -68,7 +80,7 @@ a {
 	"footer"
 }
 
-.wrapper {
+.indexwrapper {
 	grid-gap: 0px;
 	grid-template-columns: 25% 25% 25% 25%;
 	grid-template-areas:
@@ -96,6 +108,22 @@ a {
 	"footer"
 }
 
+.photowrapper {
+	width: $wrapper-width;
+	max-width: $wrapper-max-width;
+	margin: 0 auto;
+	float: none;
+	background-color: $primary-background-color;
+
+	display: grid;
+	grid-gap: 0px;
+	grid-template-areas:
+	"header"
+	"menu"
+	"photogallery"
+	"footer"
+}
+
 .wrapper {
 	grid-gap: 0px;
 	grid-template-columns: 25% 25% 25% 25%;
@@ -116,6 +144,15 @@ a {
 	"footer footer footer footer";
 }
 
+.photowrapper {
+	grid-gap: 0px;
+	grid-template-columns: 100%;
+	grid-template-areas:
+	"header"
+	"menu"
+	""
+	"footer";
+}
 
 .header {
 		font-family: 'Lato', sans-serif; 
