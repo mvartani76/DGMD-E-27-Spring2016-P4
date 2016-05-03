@@ -151,7 +151,7 @@ The keyframe declaration starts on **line 92** of **_naturepreserve.scss** and i
             animation-timing-function: ease-in-out;}
 }
 ```
-As can be seen from the code snippet above, using percentage values, the keyframe animation scales the image down, rotates in 3d along the X and Z axis, and the scales the image back up to the original size.<br><br>
+As can be seen from the code snippet above, using percentage values, the keyframe animation scales the image down, rotates in 3d along the X and Z axis, and then scales the image back up to the original size.<br><br>
 The keyframe animation starts when the mouse hovers over the photoimg9 picture. The css code snippet starts at **line 111** of **_naturepreserve.scss** as shown below.
 ```
 /* Start the keyframe animation when the mouse hovers over the photoimg9 picture */
