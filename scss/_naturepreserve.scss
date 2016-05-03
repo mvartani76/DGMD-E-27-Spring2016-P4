@@ -89,6 +89,8 @@
     transform: rotateY(360deg);
 }
 
+/* Keyframe implementation that scales the image down, rotates it */
+/* both along the X and Z 3D axis, and then scales the image back up. */
 @keyframes squish-and-rotate {
     12.5% { transform: scale(0.75);
             animation-timing-function: ease-in-out;}
@@ -106,6 +108,7 @@
             animation-timing-function: ease-in-out;}
 }
 
+/* Start the keyframe animation when the mouse hovers over the photoimg9 picture */
 .photoimg9:hover {
     animation-name: squish-and-rotate;
     animation-duration: 5s;
