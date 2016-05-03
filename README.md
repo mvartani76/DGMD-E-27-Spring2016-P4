@@ -73,4 +73,51 @@ I completed level 24 of the flexbox froggy game and the screenshot is attached.
 ### Flexbox Based Web Page
 
 ## CSS4 Grids
+### Media Queries
+Media queries are used with the CSS4 grids to primarily change the column widths to 100% in the mobile portrait screen width. The css4 grid for **photogallery.php** uses two media queries; one to set the column widths to 50% in mobile landscape screen width to have the number of photo columns change from four (4) to two (2) and the other to set the column width to 100% in mobile portrait screen width similar to the others.<br>
+The css4 grid for **thingstodo.php** is a bit different in that the order of the grid changes in mobile portrait mode as shown starting on **line 164** of **thingstodo.php** in the code snippet below.
+```SCSS
+  /* Note that in the mobile portrait screen sizes that the content section is shown
+	   before the sidebar (township information) */
+	.thingstodowrapper {
+		grid-template-columns: 100%;
+		grid-template-areas:
+		"header"
+		"menu"
+		"content"
+		"sidebar"
+		"footer";
+	}
+```
+If we compare the above code snippet with the original, non-mobile portrait screen width ordering, we see that the "content" and "sidebar" order has changed. The original thingstodo wrapper starting on **line 78** of **thingstodo.php** is shown below.
+```SCSS
+/* Define the grid for the thingstodo page (thingstodo.php) */
+/* Grid is four column. The header, menu, and footer are all full width (100%) */
+/* The content area is 50% while the regular and weather sidebars are 25% */
+/* This applies for non mobile phone portrait screen widths */
+
+/* Note that in the non-mobile portrait screen sizes that the sidebar section is shown
+   before (or to the left of) the sidebar (township information) */
+.thingstodowrapper {
+	width: $wrapper-width;
+	max-width: $wrapper-max-width;
+	margin: 0 auto;
+	float: none;
+	background-color: $primary-background-color;
+
+	display: grid;	
+	grid-gap: 0px;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-areas:
+	"header header header header"
+	"menu menu menu menu"
+	"sidebar content content outside-w-wrapper"
+	"footer footer footer footer";
+}
+```
+As we see when comparing the two, "sidebar" is displayed first (or to the left of "content") in non-mobile-portrait screen width and then displayed second (or below "content") in mobile portrait screen width.
 ## CSS Animation and SVG
+### 3D transformation on an element (using perspective)
+### 1 second transition
+### @keyframe animation
+### Manipulation of one internal element of an SVG element on hover or via other animation technique
