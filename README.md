@@ -76,21 +76,21 @@ I completed level 24 of the flexbox froggy game and the screenshot is attached.
 ### Media Queries
 Media queries are used with the CSS4 grids to primarily change the column widths to 100% in the mobile portrait screen width.<br>
 The css4 grid for **photogallery.php** uses two media queries; one to set the column widths to 50% in mobile landscape screen width to have the number of photo columns change from four (4) to two (2) and the other to set the column width to 100% in mobile portrait screen width similar to the others.<br>
-The css4 grid for **thingstodo.php** is a bit different in that the order of the grid changes in mobile portrait mode as shown starting on **line 164** of **thingstodo.php** in the code snippet below.
+The css4 grid for **thingstodo.php** is a bit different in that the order of the grid changes in mobile portrait mode as shown starting on **line 164** of **_css4grid.scss** in the code snippet below.
 ```SCSS
-  /* Note that in the mobile portrait screen sizes that the content section is shown
-	   before the sidebar (township information) */
-	.thingstodowrapper {
-		grid-template-columns: 100%;
-		grid-template-areas:
-		"header"
-		"menu"
-		"content"
-		"sidebar"
-		"footer";
-	}
+ /* Note that in the mobile portrait screen sizes that the content section is shown
+    before the sidebar (township information) */
+.thingstodowrapper {
+	grid-template-columns: 100%;
+	grid-template-areas:
+	"header"
+	"menu"
+	"content"
+	"sidebar"
+	"footer";
+}
 ```
-If we compare the above code snippet with the original, non-mobile portrait screen width ordering, we see that the "content" and "sidebar" order has changed. The original thingstodo wrapper starting on **line 78** of **thingstodo.php** is shown below.
+If we compare the above code snippet with the original, non-mobile portrait screen width ordering, we see that the "content" and "sidebar" order has changed. The original thingstodo wrapper starting on **line 78** of **_css4grid.scss** is shown below.
 ```SCSS
 /* Define the grid for the thingstodo page (thingstodo.php) */
 /* Grid is four column. The header, menu, and footer are all full width (100%) */
@@ -116,7 +116,15 @@ If we compare the above code snippet with the original, non-mobile portrait scre
 	"footer footer footer footer";
 }
 ```
-As we see when comparing the two, "sidebar" is displayed first (or to the left of "content") in non-mobile-portrait screen width and then displayed second (or below "content") in mobile portrait screen width.<br>
+As we see when comparing the two, "sidebar" is displayed first (or to the left of "content") in non-mobile-portrait screen width and then displayed second (or below "content") in mobile portrait screen width.<br><br>
+Please note that not including a grid item in the grid-item-area does not prevent it from being displayed so I needed to add a `display: none` for the weather wrapper in the mobile portrait screen width as shown starting on **line 189** of **_css4grid.scss** in the code snippet below.
+```SCSS
+/* Do not display the weather sidebar in mobile phone portrait screen width */
+.outside-w-wrapper {
+	display: none;
+}
+```
+
 ## CSS Animation and SVG
 ### 3D transformation on an element (using perspective)
 ### 1 second transition
