@@ -21,7 +21,10 @@
 	justify-self: stretch;
 }
 
-/* Set up the index wrapper to be a css4 grid and name the grid areas */
+/* Define the grid for the home page (index.php) */
+/* Grid is four column. The header, menu, and footer are all full width (100%) */
+/* The content area is 75% while the weather sidebar is 25% */
+/* This applies for non mobile phone portrait screen widths */
 .indexwrapper {
 	width: $wrapper-width;
 	max-width: $wrapper-max-width;
@@ -30,20 +33,6 @@
 	background-color: $primary-background-color;
 
 	display: grid;
-	grid-gap: 0px;
-	grid-template-areas:
-	"header"
-	"menu"
-	"content"
-	"outside-w-wrapper"
-	"footer"
-}
-
-/* Define the grid for the home page (index.php) */
-/* Grid is four column. The header, menu, and footer are all full width (100%) */
-/* The content area is 75% while the weather sidebar is 25% */
-/* This applies for non mobile phone portrait screen widths */
-.indexwrapper {
 	grid-gap: 0px;
 	grid-template-columns: 25% 25% 25% 25%;
 	grid-template-areas:
@@ -51,25 +40,6 @@
 	"menu menu menu menu"
 	"content content content outside-w-wrapper"
 	"footer footer footer footer";
-}
-
-/* Set up the thingstodo wrapper to be a css4 grid and name the grid areas */
-.thingstodowrapper {
-	width: $wrapper-width;
-	max-width: $wrapper-max-width;
-	margin: 0 auto;
-	float: none;
-	background-color: $primary-background-color;
-
-	display: grid;
-	grid-gap: 0px;
-	grid-template-areas:
-	"header"
-	"menu"
-	"content"
-	"outside-w-wrapper"          
-	"sidebar"
-	"footer"
 }
 
 /* Define the grid for the thingstodo page (thingstodo.php) */
@@ -80,6 +50,13 @@
 /* Note that in the non-mobile portrait screen sizes that the sidebar section is shown
    before (or to the left of) the sidebar (township information) */
 .thingstodowrapper {
+	width: $wrapper-width;
+	max-width: $wrapper-max-width;
+	margin: 0 auto;
+	float: none;
+	background-color: $primary-background-color;
+
+	display: grid;	
 	grid-gap: 0px;
 	grid-template-columns: 25% 25% 25% 25%;
 	grid-template-areas:
@@ -89,6 +66,8 @@
 	"footer footer footer footer";
 }
 
+/* Define the grid for the thingstodo page (thingstodo.php) */
+/* Grid is one column. The header, menu, photogallery, and footer are all full width (100%) */
 .photowrapper {
 	width: $wrapper-width;
 	max-width: $wrapper-max-width;
@@ -97,17 +76,6 @@
 	background-color: $primary-background-color;
 
 	display: grid;
-	grid-gap: 0px;
-	grid-template-areas:
-	"header"
-	"menu"
-	"photogallery"
-	"footer"
-}
-
-/* Define the grid for the thingstodo page (thingstodo.php) */
-/* Grid is one column. The header, menu, photogallery, and footer are all full width (100%) */
-.photowrapper {
 	grid-gap: 0px;
 	grid-template-columns: 100%;
 	grid-template-areas:
@@ -122,7 +90,6 @@
 // Now using foundation breakpoint() mixin
 @media only screen and #{breakpoint(medium down)} {
 	.indexwrapper {
-		grid-gap: 0px;
 		grid-template-columns: 100%;
 		grid-template-areas:
 		"header"
@@ -134,7 +101,6 @@
 	/* Note that in the mobile portrait screen sizes that the content section is shown
 	   before the sidebar (township information) */
 	.thingstodowrapper {
-		grid-gap: 0px;
 		grid-template-columns: 100%;
 		grid-template-areas:
 		"header"
