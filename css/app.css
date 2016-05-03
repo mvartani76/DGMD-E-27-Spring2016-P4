@@ -5885,11 +5885,21 @@ a {
 .content {
   grid-area: content; }
 
+.photogallery {
+  grid-area: photogallery; }
+
 .footer {
   grid-area: footer;
   justify-self: stretch; }
 
 .wrapper {
+  width: 97%;
+  max-width: 1200px;
+  margin: 0 auto;
+  float: none;
+  background-color: #EFECCA; }
+
+.indexwrapper {
   width: 97%;
   max-width: 1200px;
   margin: 0 auto;
@@ -5900,7 +5910,7 @@ a {
   grid-gap: 0px;
   grid-template-areas: "header" "menu" "content" "outside-w-wrapper" "footer"; }
 
-.wrapper {
+.indexwrapper {
   grid-gap: 0px;
   -ms-grid-columns: 25% 25% 25% 25%;
       grid-template-columns: 25% 25% 25% 25%;
@@ -5917,6 +5927,17 @@ a {
   grid-gap: 0px;
   grid-template-areas: "header" "menu" "content" "outside-w-wrapper"           "sidebar" "footer"; }
 
+.photowrapper {
+  width: 97%;
+  max-width: 1200px;
+  margin: 0 auto;
+  float: none;
+  background-color: #EFECCA;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0px;
+  grid-template-areas: "header" "menu" "photogallery" "footer"; }
+
 .wrapper {
   grid-gap: 0px;
   -ms-grid-columns: 25% 25% 25% 25%;
@@ -5928,6 +5949,12 @@ a {
   -ms-grid-columns: 25% 25% 25% 25%;
       grid-template-columns: 25% 25% 25% 25%;
   grid-template-areas: "header header header header" "menu menu menu menu" "sidebar content content outside-w-wrapper" "footer footer footer footer"; }
+
+.photowrapper {
+  grid-gap: 0px;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  grid-template-areas: "header" "menu" "" "footer"; }
 
 .header {
   font-family: 'Lato', sans-serif;
@@ -6694,12 +6721,101 @@ strong {
       -ms-flex: auto;
           flex: auto;
   width: 300px;
-  margin: 3px; }
+  margin: 3px;
+  -webkit-perspective: 500px;
+          perspective: 500px; }
 
 /* Configure the image to have the same width */
 /* as the flex child item */
 .photoflexchild img {
   width: 100%; }
+
+/* Perform 3D rotation (along Y axis) of SVG image */
+/* When the use hovers over the image */
+.photoimg7 {
+  transition: all 1s ease-in-out 0.25s; }
+
+.photoimg7:hover {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg); }
+
+@-webkit-keyframes squish-and-rotate {
+  12.5% {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out; }
+  25% {
+    -webkit-transform: scale(0.625);
+            transform: scale(0.625);
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out; }
+  50% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out; }
+  75% {
+    -webkit-transform: scale(0.625);
+            transform: scale(0.625);
+    -webkit-transform: rotateZ(180deg);
+            transform: rotateZ(180deg);
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out; }
+  87.5% {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out; }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out; } }
+
+@keyframes squish-and-rotate {
+  12.5% {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out; }
+  25% {
+    -webkit-transform: scale(0.625);
+            transform: scale(0.625);
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out; }
+  50% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out; }
+  75% {
+    -webkit-transform: scale(0.625);
+            transform: scale(0.625);
+    -webkit-transform: rotateZ(180deg);
+            transform: rotateZ(180deg);
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out; }
+  87.5% {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out; }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out; } }
+
+.photoimg9:hover {
+  -webkit-animation-name: squish-and-rotate;
+          animation-name: squish-and-rotate;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s; }
 
 /* Mobile Landscape Screen Sizes and smaller */
 /* pixel range: <767px */
