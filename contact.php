@@ -12,10 +12,8 @@
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   </head>
   <body>
-	<div class="wrapper">
+	<div class="formwrapper">
 	
-		<!-- Replaced header with row div as this seems to allow the header image to stay
-			 adjacent to the menu when scaling to the different screen sizes. -->
 		<div class="header">
 			<img data-interchange="[img/sog-entrance-500.jpg, small], 
 				[img/sog-entrance-800.jpg, medium], 

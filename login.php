@@ -12,7 +12,7 @@
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>    
   </head>
   <body>
-	<div class="wrapper">
+	<div class="formwrapper">
 
 		<div class="header">
 			<img data-interchange="[img/sog-entrance-500.jpg, small], 
