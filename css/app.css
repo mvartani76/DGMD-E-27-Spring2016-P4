@@ -5873,88 +5873,12 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: #2772B0; }
 
-.header {
-  grid-area: header; }
-
-.css4menu {
-  grid-area: menu; }
-
-.outside-w-wrapper {
-  grid-area: outside-w-wrapper; }
-
-.content {
-  grid-area: content; }
-
-.photogallery {
-  grid-area: photogallery; }
-
-.footer {
-  grid-area: footer;
-  justify-self: stretch; }
-
 .wrapper {
   width: 97%;
   max-width: 1200px;
   margin: 0 auto;
   float: none;
   background-color: #EFECCA; }
-
-.indexwrapper {
-  width: 97%;
-  max-width: 1200px;
-  margin: 0 auto;
-  float: none;
-  background-color: #EFECCA;
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 0px;
-  grid-template-areas: "header" "menu" "content" "outside-w-wrapper" "footer"; }
-
-.indexwrapper {
-  grid-gap: 0px;
-  -ms-grid-columns: 25% 25% 25% 25%;
-      grid-template-columns: 25% 25% 25% 25%;
-  grid-template-areas: "header header header header" "menu menu menu menu" "content content content outside-w-wrapper" "footer footer footer footer"; }
-
-.thingstodowrapper {
-  width: 97%;
-  max-width: 1200px;
-  margin: 0 auto;
-  float: none;
-  background-color: #EFECCA;
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 0px;
-  grid-template-areas: "header" "menu" "content" "outside-w-wrapper"           "sidebar" "footer"; }
-
-.photowrapper {
-  width: 97%;
-  max-width: 1200px;
-  margin: 0 auto;
-  float: none;
-  background-color: #EFECCA;
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 0px;
-  grid-template-areas: "header" "menu" "photogallery" "footer"; }
-
-.wrapper {
-  grid-gap: 0px;
-  -ms-grid-columns: 25% 25% 25% 25%;
-      grid-template-columns: 25% 25% 25% 25%;
-  grid-template-areas: "header header header header" "menu menu menu menu" "content content content outside-w-wrapper" "footer footer footer footer"; }
-
-.thingstodowrapper {
-  grid-gap: 0px;
-  -ms-grid-columns: 25% 25% 25% 25%;
-      grid-template-columns: 25% 25% 25% 25%;
-  grid-template-areas: "header header header header" "menu menu menu menu" "sidebar content content outside-w-wrapper" "footer footer footer footer"; }
-
-.photowrapper {
-  grid-gap: 0px;
-  -ms-grid-columns: 100%;
-      grid-template-columns: 100%;
-  grid-template-areas: "header" "menu" "" "footer"; }
 
 .header {
   font-family: 'Lato', sans-serif;
@@ -6164,18 +6088,6 @@ div.col-1-2-4 p {
 /* Mobile portrait Screen Sizes */
 /* pixel range: <= ($min-phone-landscape-width - 1) */
 @media only screen and (max-width: 31.9375em) {
-  .wrapper {
-    grid-gap: 0px;
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
-    grid-template-areas: "header" "menu" "content" "footer"; }
-  .thingstodowrapper {
-    grid-gap: 0px;
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
-    grid-template-areas: "header" "menu" "content" "sidebar" "footer"; }
-  .outside-w-wrapper {
-    display: none; }
   .header h1 {
     padding: 0.5em;
     margin: 0; }
@@ -6221,6 +6133,110 @@ div.col-1-2-4 p {
     margin: 0 auto; }
   .login-min-height {
     min-height: 25px; } }
+
+/* Stylesheet specific to css4 grid assignment portions */
+/* Create the named grid areas for ease of readibility when defining the grids */
+.header {
+  grid-area: header; }
+
+.css4menu {
+  grid-area: menu; }
+
+.outside-w-wrapper {
+  grid-area: outside-w-wrapper; }
+
+.content {
+  grid-area: content; }
+
+.photogallery {
+  grid-area: photogallery; }
+
+.footer {
+  grid-area: footer;
+  justify-self: stretch; }
+
+/* Set up the index wrapper to be a css4 grid and name the grid areas */
+.indexwrapper {
+  width: 97%;
+  max-width: 1200px;
+  margin: 0 auto;
+  float: none;
+  background-color: #EFECCA;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0px;
+  grid-template-areas: "header" "menu" "content" "outside-w-wrapper" "footer"; }
+
+/* Define the grid for the home page (index.php) */
+/* Grid is four column. The header, menu, and footer are all full width (100%) */
+/* The content area is 75% while the weather sidebar is 25% */
+/* This applies for non mobile phone portrait screen widths */
+.indexwrapper {
+  grid-gap: 0px;
+  -ms-grid-columns: 25% 25% 25% 25%;
+      grid-template-columns: 25% 25% 25% 25%;
+  grid-template-areas: "header header header header" "menu menu menu menu" "content content content outside-w-wrapper" "footer footer footer footer"; }
+
+/* Set up the thingstodo wrapper to be a css4 grid and name the grid areas */
+.thingstodowrapper {
+  width: 97%;
+  max-width: 1200px;
+  margin: 0 auto;
+  float: none;
+  background-color: #EFECCA;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0px;
+  grid-template-areas: "header" "menu" "content" "outside-w-wrapper"           "sidebar" "footer"; }
+
+/* Define the grid for the thingstodo page (thingstodo.php) */
+/* Grid is four column. The header, menu, and footer are all full width (100%) */
+/* The content area is 50% while the regular and weather sidebars are 25% */
+/* This applies for non mobile phone portrait screen widths */
+/* Note that in the non-mobile portrait screen sizes that the sidebar section is shown
+   before (or to the left of) the sidebar (township information) */
+.thingstodowrapper {
+  grid-gap: 0px;
+  -ms-grid-columns: 25% 25% 25% 25%;
+      grid-template-columns: 25% 25% 25% 25%;
+  grid-template-areas: "header header header header" "menu menu menu menu" "sidebar content content outside-w-wrapper" "footer footer footer footer"; }
+
+.photowrapper {
+  width: 97%;
+  max-width: 1200px;
+  margin: 0 auto;
+  float: none;
+  background-color: #EFECCA;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0px;
+  grid-template-areas: "header" "menu" "photogallery" "footer"; }
+
+/* Define the grid for the thingstodo page (thingstodo.php) */
+/* Grid is one column. The header, menu, photogallery, and footer are all full width (100%) */
+.photowrapper {
+  grid-gap: 0px;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  grid-template-areas: "header" "menu" "photogallery" "footer"; }
+
+/* Mobile portrait Screen Sizes */
+/* pixel range: <= ($min-phone-landscape-width - 1) */
+@media only screen and (max-width: 31.9375em) {
+  .indexwrapper {
+    grid-gap: 0px;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    grid-template-areas: "header" "menu" "content" "footer"; }
+  /* Note that in the mobile portrait screen sizes that the content section is shown
+	   before the sidebar (township information) */
+  .thingstodowrapper {
+    grid-gap: 0px;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    grid-template-areas: "header" "menu" "content" "sidebar" "footer"; }
+  .outside-w-wrapper {
+    display: none; } }
 
 /* This is the stylesheet for the three form pages that are in this
    this website, namely login.php, register.php, and contact.php. */

@@ -32,126 +32,12 @@ a {
 	color: $primary-link-color;
 }
 
-.header {
-	grid-area: header;
-}
-.css4menu {
-	grid-area: menu;
-}
-.outside-w-wrapper {
-	grid-area: outside-w-wrapper;
-}
-
-.content {
-	grid-area: content;
-}
-
-.photogallery {
-	grid-area: photogallery;
-}
-
-.footer {
-	grid-area: footer;
-	justify-self: stretch;
-}
-
 .wrapper {
 	width: $wrapper-width;
 	max-width: $wrapper-max-width;
 	margin: 0 auto;
 	float: none;
 	background-color: $primary-background-color;	
-}
-
-.indexwrapper {
-	width: $wrapper-width;
-	max-width: $wrapper-max-width;
-	margin: 0 auto;
-	float: none;
-	background-color: $primary-background-color;
-
-	display: grid;
-	grid-gap: 0px;
-	grid-template-areas:
-	"header"
-	"menu"
-	"content"
-	"outside-w-wrapper"
-	"footer"
-}
-
-.indexwrapper {
-	grid-gap: 0px;
-	grid-template-columns: 25% 25% 25% 25%;
-	grid-template-areas:
-	"header header header header"
-	"menu menu menu menu"
-	"content content content outside-w-wrapper"
-	"footer footer footer footer";
-}
-
-.thingstodowrapper {
-	width: $wrapper-width;
-	max-width: $wrapper-max-width;
-	margin: 0 auto;
-	float: none;
-	background-color: $primary-background-color;
-
-	display: grid;
-	grid-gap: 0px;
-	grid-template-areas:
-	"header"
-	"menu"
-	"content"
-	"outside-w-wrapper"          
-	"sidebar"
-	"footer"
-}
-
-.photowrapper {
-	width: $wrapper-width;
-	max-width: $wrapper-max-width;
-	margin: 0 auto;
-	float: none;
-	background-color: $primary-background-color;
-
-	display: grid;
-	grid-gap: 0px;
-	grid-template-areas:
-	"header"
-	"menu"
-	"photogallery"
-	"footer"
-}
-
-.wrapper {
-	grid-gap: 0px;
-	grid-template-columns: 25% 25% 25% 25%;
-	grid-template-areas:
-	"header header header header"
-	"menu menu menu menu"
-	"content content content outside-w-wrapper"
-	"footer footer footer footer";
-}
-
-.thingstodowrapper {
-	grid-gap: 0px;
-	grid-template-columns: 25% 25% 25% 25%;
-	grid-template-areas:
-	"header header header header"
-	"menu menu menu menu"
-	"sidebar content content outside-w-wrapper"
-	"footer footer footer footer";
-}
-
-.photowrapper {
-	grid-gap: 0px;
-	grid-template-columns: 100%;
-	grid-template-areas:
-	"header"
-	"menu"
-	""
-	"footer";
 }
 
 .header {
@@ -410,32 +296,6 @@ div.col-1-2-4 {
 /* pixel range: <= ($min-phone-landscape-width - 1) */
 // Now using foundation breakpoint() mixin
 @media only screen and #{breakpoint(medium down)} {
-
-
-.wrapper {
-	grid-gap: 0px;
-	grid-template-columns: 100%;
-	grid-template-areas:
-	"header"
-	"menu"
-	"content"
-	"footer";
-}
-
-.thingstodowrapper {
-	grid-gap: 0px;
-	grid-template-columns: 100%;
-	grid-template-areas:
-	"header"
-	"menu"
-	"content"
-	"sidebar"
-	"footer";
-}
-
-.outside-w-wrapper {
-	display: none;
-}
   
   // Nesting the header tag
   .header {  
