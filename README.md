@@ -74,7 +74,8 @@ I completed level 24 of the flexbox froggy game and the screenshot is attached.
 
 ## CSS4 Grids
 ### Media Queries
-Media queries are used with the CSS4 grids to primarily change the column widths to 100% in the mobile portrait screen width. The css4 grid for **photogallery.php** uses two media queries; one to set the column widths to 50% in mobile landscape screen width to have the number of photo columns change from four (4) to two (2) and the other to set the column width to 100% in mobile portrait screen width similar to the others.<br>
+Media queries are used with the CSS4 grids to primarily change the column widths to 100% in the mobile portrait screen width.<br>
+The css4 grid for **photogallery.php** uses two media queries; one to set the column widths to 50% in mobile landscape screen width to have the number of photo columns change from four (4) to two (2) and the other to set the column width to 100% in mobile portrait screen width similar to the others.<br>
 The css4 grid for **thingstodo.php** is a bit different in that the order of the grid changes in mobile portrait mode as shown starting on **line 164** of **thingstodo.php** in the code snippet below.
 ```SCSS
   /* Note that in the mobile portrait screen sizes that the content section is shown
@@ -115,7 +116,7 @@ If we compare the above code snippet with the original, non-mobile portrait scre
 	"footer footer footer footer";
 }
 ```
-As we see when comparing the two, "sidebar" is displayed first (or to the left of "content") in non-mobile-portrait screen width and then displayed second (or below "content") in mobile portrait screen width.
+As we see when comparing the two, "sidebar" is displayed first (or to the left of "content") in non-mobile-portrait screen width and then displayed second (or below "content") in mobile portrait screen width.<br>
 ## CSS Animation and SVG
 ### 3D transformation on an element (using perspective)
 ### 1 second transition
