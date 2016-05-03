@@ -79,7 +79,6 @@ a {
 div.photogallery {
 	h2 {
 		padding-top: 0em;
-		background-color: $primary-background-color;
 		color: $primary-heading-text-color;
 		text-align: center;
 		font-family: 'Francois One', sans-serif;
@@ -87,13 +86,13 @@ div.photogallery {
 
 	p {
 		font-family: 'Lato', sans-serif;
-		background-color: $primary-background-color;
 		color: $primary-light-text-color;
 		padding: {
 			left: $photo-photogallery-p-padding-left;
 			right: $photo-photogallery-p-padding-right;
 		}
 	}
+	background-color: $primary-background-color;
 }
 
 .second_main_pic {
@@ -122,6 +121,7 @@ div.col-1-2-4 {
 		font-family: 'Lato', sans-serif;
 		color: $primary-light-text-color;
 	}
+	background-color: $primary-background-color
 }
 
 .col-1-2-4 h3 {

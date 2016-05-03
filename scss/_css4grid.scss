@@ -16,6 +16,18 @@
 .photogallery {
 	grid-area: photogallery;
 }
+.photo1 {
+	grid-area: photo1;
+}
+.photo2 {
+	grid-area: photo2;
+}
+.photo3 {
+	grid-area: photo3;
+}
+.photo4 {
+	grid-area: photo4;
+}
 .footer {
 	grid-area: footer;
 	justify-self: stretch;
@@ -88,22 +100,43 @@
 }
 
 /* Define the grid for the photo page (thingstodo.php) */
-/* Grid is one column. The header, menu, photogallery, and footer are all full width (100%) */
+/* Grid is four columns. The header, menu, photogallery, and footer are all full width (100%) */
+/* The individual photos are 25% each */
+/* These widths apply for all except mobile phone landscape and portrait screen widths */
 .photowrapper {
 	width: $wrapper-width;
 	max-width: $wrapper-max-width;
 	margin: 0 auto;
 	float: none;
-	background-color: $primary-background-color;
+	background-color: $body-background-color;
 
 	display: grid;
 	grid-gap: 0px;
-	grid-template-columns: 100%;
+	grid-template-columns: 25% 25% 25% 25%;
 	grid-template-areas:
-	"header"
-	"menu"
-	"photogallery"
-	"footer";
+	"header header header header"
+	"menu menu menu menu"
+	"photogallery photogallery photogallery photogallery"
+	"photo1 photo2 photo3 photo4"
+	"footer footer footer footer";
+}
+
+/* Mobile Landscape Screen Sizes */
+/* pixel range: $min-phone-landscape-width - ($min-tablet-width - 1) */
+// Now using foundation breakpoint() mixin
+@media only screen and #{breakpoint(medium)} and #{breakpoint(large down)} {
+	/* Change the column width to 50% as we want to have two photos per
+	   "row" in this screen width. */
+	.photowrapper {
+		grid-template-columns: 50%;
+		grid-template-areas:
+		"header header"
+		"menu menu"
+		"photogallery photogallery"
+		"photo1 photo2"
+		"photo3 photo4"
+		"footer footer";
+	}
 }
 
 /* Mobile portrait Screen Sizes */
@@ -140,6 +173,20 @@
 		"footer";
 	}
 
+	.photowrapper {
+		grid-template-columns: 100%;
+		grid-template-areas:
+		"header"
+		"menu"
+		"photogallery"
+		"photo1"
+		"photo2"
+		"photo3"
+		"photo4"
+		"footer";
+	}
+
+	/* Do not display the weather sidebar in mobile phone portrait screen width */
 	.outside-w-wrapper {
 		display: none;
 	}

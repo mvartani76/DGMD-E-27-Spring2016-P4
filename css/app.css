@@ -5903,36 +5903,36 @@ a {
   .content img {
     float: left; }
 
-div.photogallery h2 {
-  padding-top: 0em;
-  background-color: #EFECCA;
-  color: #61381D;
-  text-align: center;
-  font-family: 'Francois One', sans-serif; }
-
-div.photogallery p {
-  font-family: 'Lato', sans-serif;
-  background-color: #EFECCA;
-  color: #BB6F39;
-  padding-left: 1%;
-  padding-right: 1%; }
+div.photogallery {
+  background-color: #EFECCA; }
+  div.photogallery h2 {
+    padding-top: 0em;
+    color: #61381D;
+    text-align: center;
+    font-family: 'Francois One', sans-serif; }
+  div.photogallery p {
+    font-family: 'Lato', sans-serif;
+    color: #BB6F39;
+    padding-left: 1%;
+    padding-right: 1%; }
 
 .second_main_pic {
   float: right; }
 
-div.col-1-2-4 img {
-  max-width: 350px;
-  width: 95%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
-
-div.col-1-2-4 p {
-  width: 95%;
-  padding-left: 5%;
-  padding-right: 2%;
-  font-family: 'Lato', sans-serif;
-  color: #BB6F39; }
+div.col-1-2-4 {
+  background-color: #EFECCA; }
+  div.col-1-2-4 img {
+    max-width: 350px;
+    width: 95%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+  div.col-1-2-4 p {
+    width: 95%;
+    padding-left: 5%;
+    padding-right: 2%;
+    font-family: 'Lato', sans-serif;
+    color: #BB6F39; }
 
 .col-1-2-4 h3 {
   color: #61381D; }
@@ -6151,6 +6151,18 @@ div.col-1-2-4 p {
 .photogallery {
   grid-area: photogallery; }
 
+.photo1 {
+  grid-area: photo1; }
+
+.photo2 {
+  grid-area: photo2; }
+
+.photo3 {
+  grid-area: photo3; }
+
+.photo4 {
+  grid-area: photo4; }
+
 .footer {
   grid-area: footer;
   justify-self: stretch; }
@@ -6209,19 +6221,31 @@ div.col-1-2-4 p {
   grid-template-areas: "header header header header" "menu menu menu menu" "sidebar content content outside-w-wrapper" "footer footer footer footer"; }
 
 /* Define the grid for the photo page (thingstodo.php) */
-/* Grid is one column. The header, menu, photogallery, and footer are all full width (100%) */
+/* Grid is four columns. The header, menu, photogallery, and footer are all full width (100%) */
+/* The individual photos are 25% each */
+/* These widths apply for all except mobile phone landscape and portrait screen widths */
 .photowrapper {
   width: 97%;
   max-width: 1200px;
   margin: 0 auto;
   float: none;
-  background-color: #EFECCA;
+  background-color: #70482D;
   display: -ms-grid;
   display: grid;
   grid-gap: 0px;
-  -ms-grid-columns: 100%;
-      grid-template-columns: 100%;
-  grid-template-areas: "header" "menu" "photogallery" "footer"; }
+  -ms-grid-columns: 25% 25% 25% 25%;
+      grid-template-columns: 25% 25% 25% 25%;
+  grid-template-areas: "header header header header" "menu menu menu menu" "photogallery photogallery photogallery photogallery" "photo1 photo2 photo3 photo4" "footer footer footer footer"; }
+
+/* Mobile Landscape Screen Sizes */
+/* pixel range: $min-phone-landscape-width - ($min-tablet-width - 1) */
+@media only screen and (min-width: 30em) and (max-width: 50.25em) {
+  /* Change the column width to 50% as we want to have two photos per
+	   "row" in this screen width. */
+  .photowrapper {
+    -ms-grid-columns: 50%;
+        grid-template-columns: 50%;
+    grid-template-areas: "header header" "menu menu" "photogallery photogallery" "photo1 photo2" "photo3 photo4" "footer footer"; } }
 
 /* Mobile portrait Screen Sizes */
 /* pixel range: <= ($min-phone-landscape-width - 1) */
@@ -6240,6 +6264,11 @@ div.col-1-2-4 p {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
     grid-template-areas: "header" "menu" "content" "sidebar" "footer"; }
+  .photowrapper {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    grid-template-areas: "header" "menu" "photogallery" "photo1" "photo2" "photo3" "photo4" "footer"; }
+  /* Do not display the weather sidebar in mobile phone portrait screen width */
   .outside-w-wrapper {
     display: none; } }
 

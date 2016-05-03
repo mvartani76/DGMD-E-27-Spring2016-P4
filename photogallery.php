@@ -50,33 +50,29 @@
 			<p>We are all very proud of the beauty and serenity of our neighborhood. Please click on the albums below to see the beauty of the land, the houses, the wildlife, and most importantly, the people of The Shores of Glenwood.</p>
 			<p>We would love for you to share your Shores of Glenwood photo memories with us. Please contact us and we will upload your photos to this site.</p> 
 		</div>
-		<div class="row" data-equalizer>
-			<div class="col-1-2-4 large-3 medium-6 columns" data-equalizer-watch>
-				<h3>The Nature Preserve</h3>
-			    <a href="./thenaturepreserve.php"><img src="img/sog-preserve-entrance-250.jpg" alt="Our Nature Preserve"></a>
-			    <p>We are so lucky to have a state nature preserve with a forest, lake and a river with lots of natural wildlife.</p>
-			</div>
-			<div class="col-1-2-4 large-3 medium-6 columns" data-equalizer-watch>
-				<h3>The Front Pond</h3>
-			    <a href="./thepondgallery.php"><img src="img/sog-pond-winter-350.jpg" alt="The Front Pond"></a>
-			    <p>The pond near our subdivision entrance way is both beautiful as well as a source for winter enjoyment.</p>
-			</div>
-			<div class="col-1-2-4 large-3 medium-6 columns" data-equalizer-watch>
-				<h3>Night Time</h3>
-			    <a href="#"><img src="img/sog-entrance-night-250.jpg" alt="Night Time"></a>
-			    <p>The beauty of our neighborhood at night during the holidays...</p>
-			</div>
-			<div class="col-1-2-4 large-3 medium-6 columns" data-equalizer-watch>
-				<h3>Our Houses</h3>
-			    <a href="#"><img src="img/sog-houses-300.jpg" alt="Our Houses"></a>
-			    <p>We have many beautiful houses in our neighborhood. Please see pictures of the houses that our residents have shared.</p>
-			</div>
+		<div class="col-1-2-4 photo1">
+			<h3>The Nature Preserve</h3>
+		    <a href="./thenaturepreserve.php"><img src="img/sog-preserve-entrance-250.jpg" alt="Our Nature Preserve"></a>
+		    <p>We are so lucky to have a state nature preserve with a forest, lake and a river with lots of natural wildlife.</p>
 		</div>
-	</div>
-	<div class="row">
-	    <footer class="xlarge-12 large-12 medium-12 columns">
-	    	<p>&copy; 2016 Shores of Glenwood Neighborhood Association </p>
-	    </footer>
+		<div class="col-1-2-4 photo2">
+			<h3>The Front Pond</h3>
+		    <a href="./thepondgallery.php"><img src="img/sog-pond-winter-350.jpg" alt="The Front Pond"></a>
+		    <p>The pond near our subdivision entrance way is both beautiful as well as a source for winter enjoyment.</p>
+		</div>
+		<div class="col-1-2-4 photo3">
+			<h3>Night Time</h3>
+		    <a href="#"><img src="img/sog-entrance-night-250.jpg" alt="Night Time"></a>
+		    <p>The beauty of our neighborhood at night during the holidays...</p>
+		</div>
+		<div class="col-1-2-4 photo4">
+			<h3>Our Houses</h3>
+		    <a href="#"><img src="img/sog-houses-300.jpg" alt="Our Houses"></a>
+		    <p>We have many beautiful houses in our neighborhood. Please see pictures of the houses that our residents have shared.</p>
+		</div>
+		<div class="footer">
+			<p>&copy; 2016 Shores of Glenwood Neighborhood Association </p>
+		</div>
 	</div>
 
     <script src="js/vendor/jquery.min.js"></script>
