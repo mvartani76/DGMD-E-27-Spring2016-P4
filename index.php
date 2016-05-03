@@ -25,11 +25,10 @@
 		</div>
 
 		<div class="css4menu">
-		<div class="title-bar" data-responsive-toggle="nav-menu" data-hide-for="medium">
-			<button class="menu-icon" type="button" data-toggle></button>
-			<div class="title-bar-title">Menu</div>
-		</div>
-
+			<div class="title-bar" data-responsive-toggle="nav-menu" data-hide-for="medium">
+				<button class="menu-icon" type="button" data-toggle></button>
+				<div class="title-bar-title">Menu</div>
+			</div>
 
 			<div class="top-bar" id="nav-menu">
 				<ul class=" medium-horizontal vertical dropdown menu" data-responsive-menu="accordion medium-dropdown">
@@ -75,56 +74,55 @@
 
 				<p>We are an active community of families, young couples, empty-nesters, and other lively people who enjoy a peaceful atmosphere and close proximity to city attractions and water recreation areas.</p>
 		</div>
-			<div class="outside-w-wrapper">
-				<h3>Local Time &amp; Weather</h3>
-				<p>
-					<?php
-					// Return date/time info of a timestamp; then format the output
-					date_default_timezone_set('America/New_York');
+		<div class="outside-w-wrapper">
+			<h3>Local Time &amp; Weather</h3>
+			<p>
+				<?php
+				// Return date/time info of a timestamp; then format the output
+				date_default_timezone_set('America/New_York');
+				
+				$mydate=getdate();
+				echo "$mydate[weekday], $mydate[month] $mydate[mday], $mydate[year]";
+				echo "<br>";
 					
-					$mydate=getdate();
-					echo "$mydate[weekday], $mydate[month] $mydate[mday], $mydate[year]";
-					echo "<br>";
-					
-	   				$currenttime = date('h:i A');
-	   				echo date('h:i A',strtotime($currenttime));
-	   				echo "<br>";
-	   				echo "<br>";
-					?>
-				</p>
-				<!-- This is the placeholder html code to insert the openweather code using javascript
-				I thought this would be a nice touch to add to a neighborhood community website...
-				This code was inspired from the following links:
-				https://github.com/michael-lynch/open-weather
-				http://openweathermap.org/
+	   			$currenttime = date('h:i A');
+	   			echo date('h:i A',strtotime($currenttime));
+	   			echo "<br>";
+	   			echo "<br>";
+				?>
+			</p>
+			<!-- This is the placeholder html code to insert the openweather code using javascript
+			I thought this would be a nice touch to add to a neighborhood community website...
+			This code was inspired from the following links:
+			https://github.com/michael-lynch/open-weather
+			http://openweathermap.org/
 
-				Unfortunately, my city does not show up on the database so it chose the closest city to it... -->
-				<div class="weather-wrapper">
-					<img src="#" class="weather-icon" alt="Weather Icon" />
+			Unfortunately, my city does not show up on the database so it chose the closest city to it... -->
+			<div class="weather-wrapper">
+				<img src="#" class="weather-icon" alt="Weather Icon" />
 			
-					<p><strong>Place</strong><br>
-					<span class="weather-place"></span></p>
+				<p><strong>Place</strong><br>
+				<span class="weather-place"></span></p>
 			
-					<p><strong>Temperature</strong>
-					<br><span class="weather-temperature"></span></p>
+				<p><strong>Temperature</strong>
+				<br><span class="weather-temperature"></span></p>
 					
-					<p><strong>Description</strong>
-					<br><span class="weather-description capitalize"></span></p>
+				<p><strong>Description</strong>
+				<br><span class="weather-description capitalize"></span></p>
 					
-					<p><strong>Humidity</strong>
-					<br><span class="weather-humidity"></span></p>
+				<p><strong>Humidity</strong>
+				<br><span class="weather-humidity"></span></p>
 					
-					<p><strong>Wind speed</strong>
-					<br><span class="weather-wind-speed"></span></p>
+				<p><strong>Wind speed</strong>
+				<br><span class="weather-wind-speed"></span></p>
 					
-					<p><strong>Sunrise</strong>
-					<br><span class="weather-sunrise"></span></p>
+				<p><strong>Sunrise</strong>
+				<br><span class="weather-sunrise"></span></p>
 					
-					<p><strong>Sunset</strong>
-					<br><span class="weather-sunset"></span></p>
-				</div>
-			</div>			
-		</div>
+				<p><strong>Sunset</strong>
+				<br><span class="weather-sunset"></span></p>
+			</div>
+		</div>			
 		<div class="footer">
 			<p>&copy; 2016 Shores of Glenwood Neighborhood Association </p>
 		</div>
