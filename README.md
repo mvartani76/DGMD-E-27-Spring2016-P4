@@ -129,4 +129,41 @@ Please note that not including a grid item in the grid-item-area does not preven
 ### 3D transformation on an element (using perspective)
 ### 1 second transition
 ### @keyframe animation
+The keyframe animation is declared in **_naturepreserve.scss** and the page incorporating it is **thenaturepreserve.php**.<br><br>
+The keyframe declaration starts on **line 92** of **_naturepreserve.scss** and is shown in the code snippet below.
+```SCSS
+/* Keyframe implementation that scales the image down, rotates it */
+/* both along the X and Z 3D axis, and then scales the image back up. */
+@keyframes squish-and-rotate {
+    12.5% { transform: scale(0.75);
+            animation-timing-function: ease-in-out;}
+    25% {   transform: scale(0.625);
+            transform: rotateX(180deg);
+            animation-timing-function: ease-in-out;}
+    50% {   transform: scale(0.5);
+            animation-timing-function: ease-in-out;}
+    75% {   transform: scale(0.625);
+            transform: rotateZ(180deg);        
+            animation-timing-function: ease-in-out;}
+    87.5% { transform: scale(0.75);
+            animation-timing-function: ease-in-out;}            
+    100% {  transform: scale(1);
+            animation-timing-function: ease-in-out;}
+}
+```
+As can be seen from the code snippet above, using percentage values, the keyframe animation scales the image down, rotates in 3d along the X and Z axis, and then scales the image back up to the original size.<br><br>
+The keyframe animation starts when the mouse hovers over the photoimg9 picture. The css code snippet starts at **line 111** of **_naturepreserve.scss** as shown below.
+```
+/* Start the keyframe animation when the mouse hovers over the photoimg9 picture */
+.photoimg9:hover {
+    animation-name: squish-and-rotate;
+    animation-duration: 5s;
+}
+```
+The image that is affected is shown starting on **line 92** of **thenaturepreserve.php** as shown below.
+```HTML
+<div class="photoflexchild flexverticalitem">
+	<img class="photoimg9" src="img/preservegallery/nature_preserve9_325x500.svg">
+</div>
+```
 ### Manipulation of one internal element of an SVG element on hover or via other animation technique
