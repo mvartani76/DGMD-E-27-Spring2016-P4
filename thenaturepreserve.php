@@ -72,6 +72,7 @@
 				<div class="photoflexchild">
 					<img src="img/preservegallery/nature_preserve5_500x325.jpg">
 				</div>
+				<!--SVG graphic used to allow animation -->
 				<div class="photoflexchild">
 					<img class="photoimg7" src="img/preservegallery/nature_preserve7_500x325.svg">
 				</div>
@@ -89,6 +90,7 @@
 				<div class="photoflexchild">
 					<img src="img/preservegallery/nature_preserve6_500x325.jpg">
 				</div>
+				<!-- SVG graphic used to allow animation -->
 				<div class="photoflexchild flexverticalitem">
 					<img class="photoimg9" src="img/preservegallery/nature_preserve9_325x500.svg">
 				</div>
