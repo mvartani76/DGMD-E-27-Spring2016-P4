@@ -75,7 +75,7 @@ The link for the flexbox based web page is: http://dgmd-e27-p4.mikevartanian.me/
 My flexbox implementation does two things.<br><br>
 One portion is a flexbox based gallery of the neighborhood nature preserve. The gallery is set up such that if an additional item is not going to fit in a given row, it will be added underneath but take up 100% of the row below So if it is just one item, that item would take up 100% but if it was two items, each would take 50%.<br><br>
 The html code for the flexbox based gallery starting on **line 54** of **thenaturepreserve.php** is shown below.
-```
+```HTML
 <div class="row">
 	<!-- Set up a flexbox based image gallery that attempts to evenly wrap
 	     images in the row. For example, if 4 on top and 2 wrap, the 2 wrapped
@@ -126,7 +126,7 @@ The html code for the flexbox based gallery starting on **line 54** of **thenatu
 </div>
 ```
 The css for the **photoflexcontainer** starts on **line 58** of **_naturepreserve.scss** and is shown below.
-```
+```SCSS
 /* Configure the flexbox gallery container: */
 /* Flex direction is row and wrap is enabled */
 .photoflexcontainer {
