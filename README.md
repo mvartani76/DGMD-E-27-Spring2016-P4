@@ -278,3 +278,34 @@ The image that is affected is shown starting on **line 93** of **thenaturepreser
 </div>
 ```
 ### Manipulation of one internal element of an SVG element on hover or via other animation technique
+The manipulation of one internal element of an SVG element on hover is shown in the contact form file, http://dgmd-e27-p4.mikevartanian.me/contact.php.<br><br>
+The color of the trunk and the leaves is transitioned from the original color to another color when hovering over the indiviual internal elements, keeping the other element the same. For example, when hovering over the tree leaves, only the tree leaves color changes and not the trunk color. Similarly, only the trunk color is changed when hovering over the tree trunk.<br><br>
+The SVG code is placed inline in the source file using the php command file_get_contents() to improve readibility as shown starting on **line 150** of **contact.php** in the code snippet below.
+```HTML
+<div>
+	<!-- Load in the tree-simple SVG using php to improve readibility -->
+	<?php echo file_get_contents("./img/tree-simple.svg"); ?>
+</div>
+```
+The style code that performs this transition is shown starting on **line 52** of **_weather-style.scss** in the code snippet below.
+```SCSS
+/* Transition Properties for SVG Element */
+#tree-simple {
+	margin: 0 auto;
+}
+
+/* Transition the fill color */
+#trunk, #leaves {
+	transition: fill 1s ease-in-out 0.5s;
+}
+
+/* Set the fill color to transition to for the leaves ID */
+#tree-simple > #leaves:hover {
+	fill: #D9AF27;
+}
+
+/* Set the fill color to transition to for the trunk ID */
+#tree-simple > #trunk:hover {
+	fill: #ED8F00;
+}
+```
