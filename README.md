@@ -71,11 +71,86 @@ The comments and code for Assignment 3 are located in GitHub here: https://githu
 ### Flexbox Froggy
 I completed level 24 of the flexbox froggy game and the screenshot is attached.
 ### Flexbox Based Web Page
+The link for the flexbox based web page is: http://dgmd-e27-p4.mikevartanian.me/thenaturepreserve.php<br><br>
+My flexbox implementation does two things.<br><br>
+One portion is a flexbox based gallery of the neighborhood nature preserve. The gallery is set up such that if an additional item is not going to fit in a given row, it will be added underneath but take up 100% of the row below So if it is just one item, that item would take up 100% but if it was two items, each would take 50%.<br><br>
+The html code for the flexbox based gallery starting on **line 54** of **thenaturepreserve.php** is shown below.
+```HTML
+<div class="row">
+	<!-- Set up a flexbox based image gallery that attempts to evenly wrap
+	     images in the row. For example, if 4 on top and 2 wrap, the 2 wrapped
+	     images will occupy the same width. Similar if only one image wraps.
+	     It will occupy the full width. -->
+	<div class="photoflexcontainer">
+		<div class="photoflexchild">
+			<img src="img/preservegallery/nature_preserve1_500x325.jpg">
+		</div>
+		<div class="photoflexchild">
+			<img src="img/preservegallery/nature_preserve2_500x325.jpg">
+		</div>
+		<div class="photoflexchild">
+			<img src="img/preservegallery/nature_preserve3_500x325.jpg">
+		</div>
+		<div class="photoflexchild">
+			<img src="img/preservegallery/nature_preserve4_500x325.jpg">
+		</div>
+		<div class="photoflexchild">
+			<img src="img/preservegallery/nature_preserve5_500x325.jpg">
+		</div>
+		<!--SVG graphic used to allow animation -->
+		<div class="photoflexchild">
+			<img class="photoimg7" src="img/preservegallery/nature_preserve7_500x325.svg">
+		</div>
+		<div class="photoflexchild">
+			<img src="img/preservegallery/nature_preserve8_500x325.jpg">
+		</div>
+		<div class="photoflexchild">
+			<img src="img/preservegallery/nature_preserve10_500x325.jpg">
+		</div>			
+		<div class="photoflexchild">
+			<img src="img/preservegallery/nature_preserve12_500x325.jpg">
+		</div>
+	</div>
+	<div class="photoflexcontainer">
+		<div class="photoflexchild">
+			<img src="img/preservegallery/nature_preserve6_500x325.jpg">
+		</div>
+		<!-- SVG graphic used to allow animation -->
+		<div class="photoflexchild flexverticalitem">
+			<img class="photoimg9" src="img/preservegallery/nature_preserve9_325x500.svg">
+		</div>
+		<div class="photoflexchild flexverticalitem">
+			<img src="img/preservegallery/nature_preserve11_325x500.jpg">
+		</div>
+	</div>
+</div>
+```
+The css for the **photoflexcontainer** starts on **line 58** of **_naturepreserve.scss** and is shown below.
+```SCSS
+/* Configure the flexbox gallery container: */
+/* Flex direction is row and wrap is enabled */
+.photoflexcontainer {
+	padding: 3px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+```
+The css for the **photoflexchild** starts on **line 67** of **_naturepreserve.scss** and is shown below.
+```SCSS
+/* Configure the flexbox child item */
+.photoflexchild {
+	flex: auto;
+	width: 300px;
+	margin: 3px;
 
+	perspective: 500px;
+}
+```
 ## CSS4 Grids
 ### Media Queries
-Media queries are used with the CSS4 grids to primarily change the column widths to 100% in the mobile portrait screen width.<br>
-The css4 grid for **photogallery.php** uses two media queries; one to set the column widths to 50% in mobile landscape screen width to have the number of photo columns change from four (4) to two (2) and the other to set the column width to 100% in mobile portrait screen width similar to the others.<br>
+Media queries are used with the CSS4 grids to primarily change the column widths to 100% in the mobile portrait screen width.<br><br>
+The css4 grid for **photogallery.php** uses two media queries; one to set the column widths to 50% in mobile landscape screen width to have the number of photo columns change from four (4) to two (2) and the other to set the column width to 100% in mobile portrait screen width similar to the others.<br><br>
 The css4 grid for **thingstodo.php** is a bit different in that the order of the grid changes in mobile portrait mode as shown starting on **line 164** of **_css4grid.scss** in the code snippet below.
 ```SCSS
  /* Note that in the mobile portrait screen sizes that the content section is shown
@@ -126,8 +201,43 @@ Please note that not including a grid item in the grid-item-area does not preven
 ```
 
 ## CSS Animation and SVG
+First note that in order to enable the 3D effects, I needed to set the perspective of the parent element as shown from **line 67** of **_naturepreserve.scss** in the code snippet below.
+```
+/* Configure the flexbox child item */
+.photoflexchild {
+	flex: auto;
+	width: 300px;
+	margin: 3px;
+
+    perspective: 500px;
+}
+```
+The perspective is set to 500px.
+
 ### 3D transformation on an element (using perspective)
+As shown above, I set the perspective of the parent element to 500px. I defined a 3D transformation of an image in the flexbox gallery as shown starting on **line 88** of **_naturepreserve.scss** in the code snippet below.
+```SCSS
+.photoimg7:hover {
+	transform: rotateY(360deg);
+}
+```
+As you can see the in above code snippet, the image is rotated 360 degrees around the Y-axis.<br><br>
+The image that is affected is shown starting on **line 75** of **thenaturepreserve.php** as shown below.
+```HTML
+<!--SVG graphic used to allow animation -->
+<div class="photoflexchild">
+	<img class="photoimg7" src="img/preservegallery/nature_preserve7_500x325.svg">
+</div>
+```
 ### 1 second transition
+I used a 1 second transition for the 3D transformation above and it is shown starting on **line 82** of **_naturepreserve.scss** in the code snippet below.
+```SCSS
+/* Perform 3D rotation (along Y axis) of SVG image */
+/* When the use hovers over the image */
+.photoimg7 {
+    transition: all 1s ease-in-out 0.25s;
+}
+```
 ### @keyframe animation
 The keyframe animation is declared in **_naturepreserve.scss** and the page incorporating it is **thenaturepreserve.php**.<br><br>
 The keyframe declaration starts on **line 92** of **_naturepreserve.scss** and is shown in the code snippet below.
@@ -160,8 +270,9 @@ The keyframe animation starts when the mouse hovers over the photoimg9 picture. 
     animation-duration: 5s;
 }
 ```
-The image that is affected is shown starting on **line 92** of **thenaturepreserve.php** as shown below.
+The image that is affected is shown starting on **line 93** of **thenaturepreserve.php** as shown below.
 ```HTML
+<!-- SVG graphic used to allow animation -->
 <div class="photoflexchild flexverticalitem">
 	<img class="photoimg9" src="img/preservegallery/nature_preserve9_325x500.svg">
 </div>
