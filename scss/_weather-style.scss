@@ -49,6 +49,27 @@ strong {
 	text-transform: capitalize;
 }
 
+/* Transition Properties for SVG Element */
+#tree-simple {
+	margin: 0 auto;
+}
+
+/* Transition the fill color */
+#trunk, #leaves {
+	transition: fill 1s ease-in-out 0.5s;
+}
+
+/* Set the fill color to transition to for the leaves ID */
+#tree-simple > #leaves:hover {
+	fill: #D9AF27;
+}
+
+/* Set the fill color to transition to for the trunk ID */
+#tree-simple > #trunk:hover {
+	fill: #ED8F00;
+}
+
+
 /* media queries */
 
 /* Desktop Screen Sizes */

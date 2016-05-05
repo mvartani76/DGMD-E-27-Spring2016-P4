@@ -147,6 +147,9 @@
 				<p><strong>Sunset</strong>
 				<br><span class="weather-sunset"></span></p>
 			</div>
+			<div>
+				<?php echo file_get_contents("./img/tree-simple.svg"); ?>
+			</div>
 		</div>
 		<div class="footer">
 			<p>&copy; 2016 Shores of Glenwood Neighborhood Association </p>
