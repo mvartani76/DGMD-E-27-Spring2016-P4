@@ -148,6 +148,7 @@
 				<br><span class="weather-sunset"></span></p>
 			</div>
 			<div>
+				<!-- Load in the tree-simple SVG using php to improve readibility -->
 				<?php echo file_get_contents("./img/tree-simple.svg"); ?>
 			</div>
 		</div>
