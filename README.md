@@ -278,7 +278,7 @@ The image that is affected is shown starting on **line 93** of **thenaturepreser
 </div>
 ```
 ### Manipulation of one internal element of an SVG element on hover or via other animation technique
-The manipulation of one internal element of an SVG element on hover is shown in the contact form file, http://dgmd-e27-p4.mikevartanian.me/contact.php.<br><br>
+The manipulation of one internal element of an SVG element on hover is shown in the contact form file, http://dgmd-e27-p4.mikevartanian.me/contact.php. The SVG element is a tree in the lower right of the page underneath the weather side bar.<br><br>
 The color of the trunk and the leaves is transitioned from the original color to another color when hovering over the indiviual internal elements, keeping the other element the same. For example, when hovering over the tree leaves, only the tree leaves color changes and not the trunk color. Similarly, only the trunk color is changed when hovering over the tree trunk.<br><br>
 The SVG code is placed inline in the source file using the php command `file_get_contents()` to improve readibility as shown starting on **line 150** of **contact.php** in the code snippet below.
 ```HTML
