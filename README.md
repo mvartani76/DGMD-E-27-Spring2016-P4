@@ -233,7 +233,7 @@ The image that is affected is shown starting on **line 75** of **thenaturepreser
 I used a 1 second transition for the 3D transformation above and it is shown starting on **line 82** of **_naturepreserve.scss** in the code snippet below.
 ```SCSS
 /* Perform 3D rotation (along Y axis) of SVG image */
-/* When the use hovers over the image */
+/* When the user hovers over the image */
 .photoimg7 {
     transition: all 1s ease-in-out 0.25s;
 }
