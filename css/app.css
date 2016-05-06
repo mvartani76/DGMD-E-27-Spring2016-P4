@@ -6797,7 +6797,7 @@ strong {
   width: 100%; }
 
 /* Perform 3D rotation (along Y axis) of SVG image */
-/* When the use hovers over the image */
+/* When the user hovers over the image */
 .photoimg7 {
   transition: all 1s ease-in-out 0.25s; }
 
