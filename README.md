@@ -150,13 +150,85 @@ The css for the **photoflexchild** starts on **line 67** of **_naturepreserve.sc
 ## CSS4 Grids
 ### Source Files Using CSS4 Grids
 The source files using CSS4 Grids are:<br>
-<ul>
-	<li>**contact.php**</li>
-	<li>**login.php**</li>
-	<li>**register.php**</li>
-	<li>**index.php**</li>
-	<li>**photogallery.php**</li>
-</ul>
+**contact.php**<br>
+**login.php**<br>
+**register.php**<br>
+**index.php**<br>
+**photogallery.php**<br>
+**thingtodo.php**<br>
+
+### Parent wrappers
+**index.php** uses the **.indexwrapper** as the parent grid file as shown starting on **line 36** of **_css4grid.scss** in the code snippet below.
+```SCSS
+/* Define the grid for the home page (index.php) */
+/* Grid is four column. The header, menu, and footer are all full width (100%) */
+/* The content area is 75% while the weather sidebar is 25% */
+/* This applies for non mobile phone portrait screen widths */
+.indexwrapper {
+	width: $wrapper-width;
+	max-width: $wrapper-max-width;
+	margin: 0 auto;
+	float: none;
+	background-color: $body-background-color;
+
+	display: grid;
+	grid-gap: 0px;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-areas:
+	"header header header header"
+	"menu menu menu menu"
+	"content content content outside-w-wrapper"
+	"footer footer footer footer";
+}
+```
+The form files, **login.php**, **register.php**, and **contact.php** use the **.formwrapper** as the parent grid file as shown starting on **line 57** of **_css4grid.scss** in the code snippet below.
+```SCSS
+/* Define the grid for the form pages */
+/* Grid is four column. The header, menu, and footer are all full width (100%) */
+/* The content area is 75% while the weather sidebar is 25% */
+/* This applies for non mobile phone portrait screen widths */
+.formwrapper {
+	width: $wrapper-width;
+	max-width: $wrapper-max-width;
+	margin: 0 auto;
+	float: none;
+	background-color: $body-background-color;	
+
+	display: grid;
+	grid-gap: 0px;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-areas:
+	"header header header header"
+	"menu menu menu menu"
+	"content content content outside-w-wrapper"
+	"footer footer footer footer";
+}
+```
+**photogallery.php** uses the **.photowrapper** as the parent grid file as shown starting on **line 102** of **_css4grid.scss** in the code snippet below.
+```SCSS
+/* Define the grid for the photo page (thingstodo.php) */
+/* Grid is four columns. The header, menu, photogallery, and footer are all full width (100%) */
+/* The individual photos are 25% each */
+/* These widths apply for all except mobile phone landscape and portrait screen widths */
+.photowrapper {
+	width: $wrapper-width;
+	max-width: $wrapper-max-width;
+	margin: 0 auto;
+	float: none;
+	background-color: $body-background-color;
+
+	display: grid;
+	grid-gap: 0px;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-areas:
+	"header header header header"
+	"menu menu menu menu"
+	"photogallery photogallery photogallery photogallery"
+	"photo1 photo2 photo3 photo4"
+	"footer footer footer footer";
+}
+```
+
 ### Media Queries
 Media queries are used with the CSS4 grids to primarily change the column widths to 100% in the mobile portrait screen width.<br><br>
 The css4 grid for **photogallery.php** uses two media queries; one to set the column widths to 50% in mobile landscape screen width to have the number of photo columns change from four (4) to two (2) and the other to set the column width to 100% in mobile portrait screen width similar to the others.<br><br>
