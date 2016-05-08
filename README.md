@@ -148,6 +148,15 @@ The css for the **photoflexchild** starts on **line 67** of **_naturepreserve.sc
 }
 ```
 ## CSS4 Grids
+### Source Files Using CSS4 Grids
+The source files using CSS4 Grids are:<br>
+<ul>
+	<li>**contact.php**</li>
+	<li>**login.php**</li>
+	<li>**register.php**</li>
+	<li>**index.php**</li>
+	<li>**photogallery.php**</li>
+</ul>
 ### Media Queries
 Media queries are used with the CSS4 grids to primarily change the column widths to 100% in the mobile portrait screen width.<br><br>
 The css4 grid for **photogallery.php** uses two media queries; one to set the column widths to 50% in mobile landscape screen width to have the number of photo columns change from four (4) to two (2) and the other to set the column width to 100% in mobile portrait screen width similar to the others.<br><br>
