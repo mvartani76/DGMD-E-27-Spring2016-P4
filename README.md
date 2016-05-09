@@ -72,7 +72,7 @@ The comments and code for Assignment 3 are located in GitHub here: https://githu
 I completed level 24 of the flexbox froggy game and the screenshot is attached.
 ### Flexbox Based Web Page
 The link for the flexbox based web page is: http://dgmd-e27-p4.mikevartanian.me/thenaturepreserve.php<br><br>
-My flexbox implementation enables a simple gallery and a responsive navigation menu.<br><br>
+My flexbox implementation enables a **simple gallery** and a **responsive navigation menu**.<br><br>
 #### Simple Flexbox Gallery
 One portion is a flexbox based gallery of the neighborhood nature preserve. The gallery is set up such that if an additional item is not going to fit in a given row, it will be added underneath but take up 100% of the row below So if it is just one item, that item would take up 100% but if it was two items, each would take 50%.<br><br>
 The html code for the flexbox based gallery starting on **line 54** of **thenaturepreserve.php** is shown below.
@@ -174,7 +174,7 @@ The source code for the simple flexbox based navigation menu starts on **line 27
 	</ul>
 </div>
 ```
-The css code for nav-flex and nav-link-flex for non-mobile phone portrait widths is shown below.<br><br>
+The css code for **nav-flex**, **nav-link-flex**, and **nav-flex-dropdown** for non-mobile phone portrait widths is shown below.<br><br>
 From **line 1** of **_naturepreserve.scss**.
 ```SCSS
 .nav-flex {
