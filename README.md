@@ -72,7 +72,8 @@ The comments and code for Assignment 3 are located in GitHub here: https://githu
 I completed level 24 of the flexbox froggy game and the screenshot is attached.
 ### Flexbox Based Web Page
 The link for the flexbox based web page is: http://dgmd-e27-p4.mikevartanian.me/thenaturepreserve.php<br><br>
-My flexbox implementation does two things.<br><br>
+My flexbox implementation enables a simple gallery and a responsive navigation menu.<br><br>
+#### Simple Flexbox Gallery
 One portion is a flexbox based gallery of the neighborhood nature preserve. The gallery is set up such that if an additional item is not going to fit in a given row, it will be added underneath but take up 100% of the row below So if it is just one item, that item would take up 100% but if it was two items, each would take 50%.<br><br>
 The html code for the flexbox based gallery starting on **line 54** of **thenaturepreserve.php** is shown below.
 ```HTML
@@ -146,6 +147,156 @@ The css for the **photoflexchild** starts on **line 67** of **_naturepreserve.sc
 
 	perspective: 500px;
 }
+```
+#### Flexbox Navigation Menu
+The source code for the simple flexbox based navigation menu starts on **line 27** of **thenaturepreserve.php** in the code snippet below.
+```HTML
+<!-- Flexbox styled navigation menu -->
+<!-- Needed to remove top-bar as it is using flexbox as well and we need to 
+ all the flexbox ourselves for this exercise. -->
+<div class="row">
+	<ul class="nav-flex">
+		<li class="nav-link-flex"><a href="./index.php">Home</a></li>
+		<li class="nav-link-flex"><a href="#">About</a></li>
+		<li class="nav-link-flex"><a href="./thingstodo.php">Things to Do</a></li>
+		<li class="nav-link-flex active"><a href="./photogallery.php">Photo Gallery</a></li>
+		<!-- Login/Register is a dropdown menu and contains submenus for Login and Register -->
+		<li class="nav-link-flex login_reg">
+			<a href="#">Login/Register</a>
+			<div>
+	      			<ul class="nav-flex-dropdown">
+					<li><a href="./login.php">Login</a></li>
+					<li><a href="./register.php">Register</a></li>
+				</ul>
+			</div>
+		</li>
+		<li class="nav-link-flex"><a href="./contact.php">Contact Us</a></li>
+	</ul>
+</div>
+```
+The css code for nav-flex and nav-link-flex for non-mobile phone portrait widths is shown below.<br><br>
+From **line 1** of **_naturepreserve.scss**.
+```SCSS
+.nav-flex {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+	// Needed to set margin to 0 to get the menu aligned
+    margin: 0;
+    background-color: $secondary-background-color;
+
+    li {
+        justify-content: center;
+        a {
+            text-decoration: none;
+            align-self: center;
+            color: white;
+			font-family: 'Lato', sans-serif;
+			background-color: $secondary-background-color;
+        }
+    }
+}
+```
+From **line 21** of **_naturepreserve.scss**.
+``` SCSS
+.nav-link-flex {
+    display: flex;
+    padding: 0 5px;
+    //position: relative;
+    flex-direction: column;
+
+    &:hover {
+        background-color: $secondary-background-color;
+
+        a {
+            color: $menu-toggle-hover-active-color;
+            text-decoration: none;
+            
+            &+ div {
+                display: block;
+            }
+        }
+        
+    }
+
+    a {
+
+        &+ div {
+            box-shadow: 0 3px 1px rgba(0,0,0,.05);
+            display: none;
+            font-size: 1rem;
+            position: absolute;
+            width: 195px;
+        }
+    }
+}
+```
+From **line 53** of **_naturepreserve.scss**.
+```SCSS
+.nav-flex-dropdown {
+	list-style-type: none;
+	background-color: $secondary-background-color;
+}
+```
+The typography of **nav-link-flex** is adjusted over different media queries..<br><br>
+The menu becomes vertical in mobile-phone portrait widths and the css for nav-link and nav-link-flex are shown below.
+```SCSS
+.nav-flex {
+	padding-top: 0;
+	flex-wrap: nowrap;
+	-webkit-flex-wrap: nowrap;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	background-color: $secondary-background-color;
+}
+```
+``` SCSS
+.nav-link-flex {
+        width: 90%;
+        background-color: $secondary-background-color;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 22px;
+        padding: 5px;
+
+        &:hover {
+		background-color: $secondary-background-color;
+
+        	a {
+	                color: $menu-toggle-hover-active-color;
+	                text-decoration: none;
+            
+                	&+ div {
+                    		display: none;
+			}
+		}
+        
+	}
+}
+```
+In order to emulate an "accordion" type menu in the vertical mode (mobile portrait width), the following jQuery code was added starting on **line 114** of **thenaturepreserve.php** as shown below.
+```HTML
+	<script>
+	    /*jQuery for creating psuedo accordion only in mobile portrait mode*/
+		$(document).ready(function(){
+			var menu_inserted = false;
+			$(".login_reg").click(function(){
+				// Only Insert Additional <li>'s if in mobile portrait width
+				if ($(window).width() <= 480){
+					if (menu_inserted == false){
+						$('<li class="nav-link-flex tmp-li"><a href="./login.php">Login</a></li><li class="nav-link-flex tmp-li"><a href="./register.php">Register</a></li>').insertAfter('.login_reg');
+						menu_inserted = true;
+					}
+					else if (menu_inserted == true){
+						$(".tmp-li").remove();
+						menu_inserted = false;
+					}
+				}
+			})
+		})
+	</script>
 ```
 ## CSS4 Grids
 ### Source Files Using CSS4 Grids
