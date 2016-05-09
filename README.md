@@ -150,12 +150,12 @@ The css for the **photoflexchild** starts on **line 67** of **_naturepreserve.sc
 ## CSS4 Grids
 ### Source Files Using CSS4 Grids
 The source files using CSS4 Grids are:<br>
-**contact.php**<br>
-**login.php**<br>
-**register.php**<br>
-**index.php**<br>
-**photogallery.php**<br>
-**thingtodo.php**<br>
+**contact.php** - http://dgmd-e27-p4.mikevartanian.me/contact.php<br>
+**login.php** - http://dgmd-e27-p4.mikevartanian.me/login.php<br>
+**register.php** - http://dgmd-e27-p4.mikevartanian.me/register.php<br>
+**index.php** - http://dgmd-e27-p4.mikevartanian.me/index.php<br>
+**photogallery.php** - http://dgmd-e27-p4.mikevartanian.me/photogallery.php<br>
+**thingtodo.php** - http://dgmd-e27-p4.mikevartanian.me/thingstodo.php<br>
 
 ### Parent wrappers
 **index.php** uses the **.indexwrapper** as the parent grid file as shown starting on **line 36** of **_css4grid.scss** in the code snippet below.
@@ -225,6 +225,32 @@ The form files, **login.php**, **register.php**, and **contact.php** use the **.
 	"menu menu menu menu"
 	"photogallery photogallery photogallery photogallery"
 	"photo1 photo2 photo3 photo4"
+	"footer footer footer footer";
+}
+```
+Finally **thingstodo.php** uses the **.thingstodowrapper** as the parent grid file as shown starting on **line 78** of **_css4grid.scss** in the code snippet below.
+```SCSS
+/* Define the grid for the thingstodo page (thingstodo.php) */
+/* Grid is four column. The header, menu, and footer are all full width (100%) */
+/* The content area is 50% while the regular and weather sidebars are 25% */
+/* This applies for non mobile phone portrait screen widths */
+
+/* Note that in the non-mobile portrait screen sizes that the sidebar section is shown
+   before (or to the left of) the sidebar (township information) */
+.thingstodowrapper {
+	width: $wrapper-width;
+	max-width: $wrapper-max-width;
+	margin: 0 auto;
+	float: none;
+	background-color: $primary-background-color;
+
+	display: grid;	
+	grid-gap: 0px;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-areas:
+	"header header header header"
+	"menu menu menu menu"
+	"sidebar content content outside-w-wrapper"
 	"footer footer footer footer";
 }
 ```
