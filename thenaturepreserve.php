@@ -112,7 +112,7 @@
     <script src="js/app.js"></script>
 
 	<script>
-	    /*jQuery for creating psuedo accordion only in mobile portrait mode*/
+	    /*jQuery for creating psuedo accordion navigation menu only in mobile portrait mode*/
 		$(document).ready(function(){
 			var menu_inserted = false;
 			$(".login_reg").click(function(){
