@@ -6757,7 +6757,6 @@ strong {
       .nav-link-flex:hover a + div {
         display: block; }
   .nav-link-flex a + div {
-    border-radius: 0 0 2px 2px;
     box-shadow: 0 3px 1px rgba(0, 0, 0, 0.05);
     display: none;
     font-size: 1rem;
@@ -6765,7 +6764,8 @@ strong {
     width: 195px; }
 
 .nav-flex-dropdown {
-  list-style-type: none; }
+  list-style-type: none;
+  background-color: #ED8F00; }
 
 /* Configure the flexbox gallery container: */
 /* Flex direction is row and wrap is enabled */
@@ -6936,16 +6936,25 @@ strong {
     -ms-flex-direction: column;
         flex-direction: column;
     -webkit-flex-direction: column;
-    background-color: #f6f6f6; }
+    background-color: #ED8F00; }
   .nav-link-flex {
     width: 90%;
     background-color: #ED8F00;
-    border-radius: 20px;
-    margin-bottom: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
     margin-left: auto;
     margin-right: auto;
     font-size: 22px;
-    padding: 10px; } }
+    padding: 5px; }
+    .nav-link-flex:hover {
+      background-color: #ED8F00; }
+      .nav-link-flex:hover a {
+        color: #a16100;
+        text-decoration: none; }
+        .nav-link-flex:hover a + div {
+          display: none; }
+  .ndfd-li {
+    display: none; } }
 
 .menu {
   background-color: #ED8F00; }

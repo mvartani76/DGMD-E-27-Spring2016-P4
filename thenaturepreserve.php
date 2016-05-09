@@ -34,8 +34,8 @@
 					<li class="nav-link-flex"><a href="./thingstodo.php">Things to Do</a></li>
 					<li class="nav-link-flex active"><a href="./photogallery.php">Photo Gallery</a></li>
 					<!-- Login/Register is a dropdown menu and contains submenus for Login and Register -->
-					<li class="nav-link-flex">
-						<a href="">Login/Register</a>
+					<li class="nav-link-flex login_reg">
+						<a href="#">Login/Register</a>
 						<div>
 	        			<ul class="nav-flex-dropdown">
 							<li><a href="./login.php">Login</a></li>
@@ -110,5 +110,25 @@
     <script src="js/vendor/what-input.min.js"></script>
     <script src="js/foundation.min.js"></script>
     <script src="js/app.js"></script>
+
+	<script>
+	    /*jQuery for creating psuedo accordion only in mobile portrait mode*/
+		$(document).ready(function(){
+			var menu_inserted = false;
+			$(".login_reg").click(function(){
+				// Only Insert Additional <li>'s if in mobile portrait width
+				if ($(window).width() <= 480){
+					if (menu_inserted == false){
+						$('<li class="nav-link-flex tmp-li"><a href="./login.php">Login</a></li><li class="nav-link-flex tmp-li"><a href="./register.php">Register</a></li>').insertAfter('.login_reg');
+						menu_inserted = true;
+					}
+					else if (menu_inserted == true){
+						$(".tmp-li").remove();
+						menu_inserted = false;
+					}
+				}
+			})
+		})
+	</script>
 </body>
 </html>

@@ -41,7 +41,6 @@
     a {
 
         &+ div {
-            border-radius: 0 0 2px 2px;
             box-shadow: 0 3px 1px rgba(0,0,0,.05);
             display: none;
             font-size: 1rem;
@@ -53,6 +52,7 @@
 
 .nav-flex-dropdown {
 	list-style-type: none;
+    background-color: $secondary-background-color;
 }
 
 /* Configure the flexbox gallery container: */
@@ -184,17 +184,35 @@
         -webkit-flex-wrap: nowrap;
         flex-direction: column;
         -webkit-flex-direction: column;
-        background-color: #f6f6f6;
+        background-color: $secondary-background-color;
     }
 
 	.nav-link-flex {
         width: 90%;
         background-color: $secondary-background-color;
-        border-radius: 20px;
-        margin-bottom: 10px;
+        border-radius: 5px;
+        margin-bottom: 5px;
         margin-left: auto;
         margin-right: auto;
         font-size: 22px;
-        padding: 10px;
-    }	
+        padding: 5px;
+
+        &:hover {
+            background-color: $secondary-background-color;
+
+        a {
+                color: $menu-toggle-hover-active-color;
+                text-decoration: none;
+            
+                &+ div {
+                    display: none;
+                }
+            }
+        
+        }
+    }
+
+    .ndfd-li {
+        display: none;
+    }
 }
