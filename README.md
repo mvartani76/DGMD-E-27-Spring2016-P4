@@ -258,6 +258,41 @@ Finally **thingstodo.php** uses the **.thingstodowrapper** as the parent grid fi
 ### Media Queries
 Media queries are used with the CSS4 grids to primarily change the column widths to 100% in the mobile portrait screen width.<br><br>
 The css4 grid for **photogallery.php** uses two media queries; one to set the column widths to 50% in mobile landscape screen width to have the number of photo columns change from four (4) to two (2) and the other to set the column width to 100% in mobile portrait screen width similar to the others.<br><br>
+
+#### Change Four Columns to Two in Mobile Landscape
+The code below starting on **line 128** of **_css4grid.scss** changes the css4 grid from four (4) columns to two (2) columns in the code snippet below. 
+```SCSS
+/* Change the column width to 50% as we want to have two photos per
+   "row" in this screen width. */
+.photowrapper {
+	grid-template-columns: 50%;
+	grid-template-areas:
+	"header header"
+	"menu menu"
+	"photogallery photogallery"
+	"photo1 photo2"
+	"photo3 photo4"
+	"footer footer";
+}
+```
+
+#### Change Two Columns to One in Mobile Portrait
+The code below starting on **line 176** of **_css4grid.scss** changes the css4 grid from two (2) columns to one (1) columns in the code snippet below.
+```SCSS
+.photowrapper {
+	grid-template-columns: 100%;
+	grid-template-areas:
+	"header"
+	"menu"
+	"photogallery"
+	"photo1"
+	"photo2"
+	"photo3"
+	"photo4"
+	"footer";
+}
+```
+
 The css4 grid for **thingstodo.php** is a bit different in that the order of the grid changes in mobile portrait mode as shown starting on **line 164** of **_css4grid.scss** in the code snippet below.
 ```SCSS
  /* Note that in the mobile portrait screen sizes that the content section is shown
