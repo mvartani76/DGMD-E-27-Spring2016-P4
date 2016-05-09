@@ -255,6 +255,43 @@ Finally **thingstodo.php** uses the **.thingstodowrapper** as the parent grid fi
 }
 ```
 
+### Named Grid Areas
+The named grid areas used in the parent wrappers above are defined starting on **line 3** of **_css4grid.scss** as shown below.
+```SCSS
+/* Create the named grid areas for ease of readibility when defining the grids */ 
+.header {
+	grid-area: header;
+}
+.css4menu {
+	grid-area: menu;
+}
+.outside-w-wrapper {
+	grid-area: outside-w-wrapper;
+}
+.content {
+	grid-area: content;
+}
+.photogallery {
+	grid-area: photogallery;
+}
+.photo1 {
+	grid-area: photo1;
+}
+.photo2 {
+	grid-area: photo2;
+}
+.photo3 {
+	grid-area: photo3;
+}
+.photo4 {
+	grid-area: photo4;
+}
+.footer {
+	grid-area: footer;
+	justify-self: stretch;
+}
+```
+
 ### Media Queries
 Media queries are used with the CSS4 grids to primarily change the column widths to 100% in the mobile portrait screen width.<br><br>
 The css4 grid for **photogallery.php** uses two media queries; one to set the column widths to 50% in mobile landscape screen width to have the number of photo columns change from four (4) to two (2) and the other to set the column width to 100% in mobile portrait screen width similar to the others.<br><br>
