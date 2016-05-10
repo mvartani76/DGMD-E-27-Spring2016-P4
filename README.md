@@ -279,7 +279,7 @@ The menu becomes vertical in mobile-phone portrait widths and the css for nav-li
 In order to emulate an "accordion" type menu in the vertical mode (mobile portrait width), the following jQuery code was added starting on **line 114** of **thenaturepreserve.php** as shown below.
 ```HTML
 	<script>
-	    /*jQuery for creating psuedo accordion only in mobile portrait mode*/
+	    /*jQuery for creating psuedo accordion navigation menu only in mobile portrait mode*/
 		$(document).ready(function(){
 			var menu_inserted = false;
 			$(".login_reg").click(function(){
@@ -480,7 +480,7 @@ The code below starting on **line 176** of **_css4grid.scss** changes the css4 g
 	"footer";
 }
 ```
-
+#### Re-ordering the css4 grids
 The css4 grid for **thingstodo.php** is a bit different in that the order of the grid changes in mobile portrait mode as shown starting on **line 164** of **_css4grid.scss** in the code snippet below.
 ```SCSS
  /* Note that in the mobile portrait screen sizes that the content section is shown
