@@ -5937,7 +5937,7 @@ div.col-1-2-4 {
 .col-1-2-4 h3 {
   color: #61381D; }
 
-.footer {
+.footer, footer {
   clear: both;
   padding-top: 0.5em;
   padding-bottom: 0.5em;

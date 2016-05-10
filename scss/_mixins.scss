@@ -79,7 +79,7 @@
 // The set-footer mixin sets various parameters associated with the footer
 @mixin set-footer($footer-padding-top, $footer-padding-bottom, $footer-padding-left, $footer-padding-right,
 			$footer-margin-top, $footer-margin-bottom, $footer-margin-left, $footer-margin-right) {
-	.footer {
+	.footer, footer {
 		clear: both;
 		padding: {
 			top: $footer-padding-top;
